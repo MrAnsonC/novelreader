@@ -21,20 +21,33 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentChapterIndex = 0;
     let isInChapterListView = false;
 
-    // Initial Font Size
-    const defaultFontSize = 22;
-    updateFontSize(defaultFontSize);
-    fontSizeSliderSidebar.value = defaultFontSize;
-    fontSizeInputFooter.value = defaultFontSize;
+    // Retrieve saved settings from localStorage
+    const savedChapterIndex = localStorage.getItem('currentChapterIndex');
+    const savedFontSize = localStorage.getItem('fontSize');
+    const savedTheme = localStorage.getItem('theme');
+
+    // Set initial values from saved settings or defaults
+    currentChapterIndex = savedChapterIndex ? parseInt(savedChapterIndex) : 0;
+    const initialFontSize = savedFontSize ? parseInt(savedFontSize) : 22;
+    const initialTheme = savedTheme || 'white-black';
+
+    // Apply saved settings
+    updateFontSize(initialFontSize);
+    updateTheme(initialTheme);
+    fontSizeSliderSidebar.value = initialFontSize;
+    fontSizeInputFooter.value = initialFontSize;
+    themeSelector.value = initialTheme;
 
     // Event Listeners
     themeSelector.addEventListener('change', (e) => {
         updateTheme(e.target.value);
+        localStorage.setItem('theme', e.target.value);
     });
 
     fontSizeSliderSidebar.addEventListener('input', (e) => {
         updateFontSize(e.target.value);
         fontSizeInputFooter.value = e.target.value;
+        localStorage.setItem('fontSize', e.target.value);
     });
 
     fontSizeInputFooter.addEventListener('input', (e) => {
@@ -42,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateFontSize(size);
         fontSizeInputFooter.value = size;
         fontSizeSliderSidebar.value = size;
+        localStorage.setItem('fontSize', size);
     });
 
     hamburger.addEventListener('click', () => {
@@ -135,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
 
             currentChapterIndex = index;
+            localStorage.setItem('currentChapterIndex', currentChapterIndex);
             updateNavigationButtons();
             contentDiv.scrollIntoView({ behavior: 'instant' });
         }
