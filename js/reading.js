@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextFooterBtn = document.getElementById('nextChapter');
     const fontSizeSliderSidebar = document.getElementById('fontSizeSliderSidebar');
     const fontSizeInputFooter = document.getElementById('fontSizeInputFooter');
-    const fontSizeValueSidebar = document.getElementById('fontSizeValueSidebar');
+    const themeSelector = document.getElementById('themeSelector');
 
     let chapters = [];
     let currentChapterIndex = 0;
@@ -26,7 +26,36 @@ document.addEventListener('DOMContentLoaded', () => {
     updateFontSize(defaultFontSize);
     fontSizeSliderSidebar.value = defaultFontSize;
     fontSizeInputFooter.value = defaultFontSize;
-    fontSizeValueSidebar.textContent = defaultFontSize;
+
+    themeSelector.addEventListener('change', (e) => {
+        const theme = e.target.value;
+        updateTheme(theme);
+    });
+
+    const updateTheme = (theme) => {
+        switch(theme) {
+            case 'white-black':
+                document.body.style.backgroundColor = '#fff';
+                document.body.style.color = '#000';
+                break;
+            case 'black-white':
+                document.body.style.backgroundColor = '#000';
+                document.body.style.color = '#fff';
+                break;
+            case 'lightblue-black':
+                document.body.style.backgroundColor = '#add8e6';
+                document.body.style.color = '#000';
+                break;
+            case 'lightyellow-black':
+                document.body.style.backgroundColor = '#ffffe0';
+                document.body.style.color = '#000';
+                break;
+            default:
+                document.body.style.backgroundColor = '#fff';
+                document.body.style.color = '#000';
+                break;
+        }
+    };
 
     fontSizeSliderSidebar.addEventListener('input', (e) => {
         const size = e.target.value;
@@ -41,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateFontSize(size);
         fontSizeInputFooter.value = size;
         fontSizeSliderSidebar.value = size;
-        fontSizeValueSidebar.textContent = size;
+        
     });
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -83,6 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 currentChapterIndex = index;
                 updateNavigationButtons();
+
+                contentDiv.scrollIntoView({ behavior: 'instant' });
             }
         }
 
