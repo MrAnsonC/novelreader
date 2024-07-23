@@ -18,8 +18,15 @@ header {
     position: relative;
 }
 
-header h1 {
+.title-link {
+    color: #fff;
+    text-decoration: none; 
+}
+
+.title-link h1 {
     margin: 0;
+    font-size: 1.75em;
+    cursor: pointer; 
 }
 
 .hamburger {

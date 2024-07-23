@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(filePath)
             .then(response => response.text())
             .then(text => {
-                chapters = text.split(/\n(?=第\d+章)/);
+                chapters = text.split(/\n(?=第\d+章 )/);
                 loadChapter(currentChapterIndex);
                 populateChapterList();
                 updateNavigationButtons();
