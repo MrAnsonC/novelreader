@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Element References
     const contentDiv = document.getElementById('content');
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('menu');
@@ -11,32 +12,85 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevFooterBtn = document.getElementById('prevChapter');
     const nextFooterBtn = document.getElementById('nextChapter');
     const fontSizeSliderSidebar = document.getElementById('fontSizeSliderSidebar');
+    const fontSizeValueSidebar = document.getElementById('fontSizeValueSidebar');
     const fontSizeInputFooter = document.getElementById('fontSizeInputFooter');
     const themeSelector = document.getElementById('themeSelector');
 
+    // State Variables
     let chapters = [];
     let currentChapterIndex = 0;
-    let isInChapterListView = false; // Track if we are in the chapter list view
+    let isInChapterListView = false;
 
-    const updateFontSize = (size) => {
-        contentDiv.style.fontSize = `${size}px`;
-    };
-
+    // Initial Font Size
     const defaultFontSize = 22;
     updateFontSize(defaultFontSize);
     fontSizeSliderSidebar.value = defaultFontSize;
     fontSizeInputFooter.value = defaultFontSize;
 
+    // Event Listeners
     themeSelector.addEventListener('change', (e) => {
-        const theme = e.target.value;
-        updateTheme(theme);
+        updateTheme(e.target.value);
     });
 
+    fontSizeSliderSidebar.addEventListener('input', (e) => {
+        updateFontSize(e.target.value);
+        fontSizeInputFooter.value = e.target.value;
+    });
+
+    fontSizeInputFooter.addEventListener('input', (e) => {
+        let size = Math.max(10, Math.min(parseInt(e.target.value), 46)); // Clamp size between 10 and 46
+        updateFontSize(size);
+        fontSizeInputFooter.value = size;
+        fontSizeSliderSidebar.value = size;
+    });
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.add('open');
+        document.body.classList.add('menu-open');
+    });
+
+    closeMenu.addEventListener('click', () => {
+        menu.classList.remove('open');
+        document.body.classList.remove('menu-open');
+    });
+
+    backBtnSidebar.addEventListener('click', () => {
+        if (isInChapterListView) {
+            showMenuButtons(); // Go back to the menu
+        } else {
+            window.location.href = 'index.html'; // Navigate back to index.html
+        }
+    });
+
+    prevBtnSidebar.addEventListener('click', () => {
+        if (currentChapterIndex > 0) loadChapter(currentChapterIndex - 1);
+    });
+
+    nextBtnSidebar.addEventListener('click', () => {
+        if (currentChapterIndex < chapters.length - 1) loadChapter(currentChapterIndex + 1);
+    });
+
+    chapterListSidebar.addEventListener('click', showChapterList);
+    prevFooterBtn.addEventListener('click', () => {
+        if (currentChapterIndex > 0) loadChapter(currentChapterIndex - 1);
+    });
+
+    nextFooterBtn.addEventListener('click', () => {
+        if (currentChapterIndex < chapters.length - 1) loadChapter(currentChapterIndex + 1);
+    });
+
+    // Set menu styles
     menu.style.backgroundColor = '#333';
     menu.style.color = '#fff';
 
-    const updateTheme = (theme) => {
-        switch(theme) {
+    // Utility Functions
+    function updateFontSize(size) {
+        contentDiv.style.fontSize = `${size}px`;
+        fontSizeValueSidebar.textContent = size;
+    }
+
+    function updateTheme(theme) {
+        switch (theme) {
             case 'white-black':
                 document.body.style.backgroundColor = '#fff';
                 document.body.style.color = '#000';
@@ -58,24 +112,76 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.color = '#000';
                 break;
         }
-    };
+    }
 
-    fontSizeSliderSidebar.addEventListener('input', (e) => {
-        const size = e.target.value;
-        updateFontSize(size);
-        fontSizeInputFooter.value = size;
-        fontSizeValueSidebar.textContent = size;
-    });
+    function loadChapter(index) {
+        if (index < 0 || index >= chapters.length) return;
 
-    fontSizeInputFooter.addEventListener('input', (e) => {
-        let size = parseInt(e.target.value);
-        size = Math.max(10, Math.min(size, 46)); // Clamp size between 10 and 46
-        updateFontSize(size);
-        fontSizeInputFooter.value = size;
-        fontSizeSliderSidebar.value = size;
-        
-    });
+        const chapter = chapters[index];
+        const [title, ...contentLines] = chapter.split('\n');
 
+        if (title.startsWith('第')) {
+            const chapterTitle = title.trim();
+            const chapterContent = contentLines.join('\n').trim();
+
+            const formattedContent = chapterContent
+                .split('\n')
+                .map(paragraph => `<p>${paragraph.trim()}</p>`)
+                .join('');
+
+            contentDiv.innerHTML = `
+                <div class="chapter-title">${chapterTitle}</div>
+                <div class="chapter-content">${formattedContent}</div>
+            `;
+
+            currentChapterIndex = index;
+            updateNavigationButtons();
+            contentDiv.scrollIntoView({ behavior: 'instant' });
+        }
+    }
+
+    function updateNavigationButtons() {
+        const atStart = currentChapterIndex === 0;
+        const atEnd = currentChapterIndex === chapters.length - 1;
+
+        prevFooterBtn.disabled = atStart;
+        nextFooterBtn.disabled = atEnd;
+        prevBtnSidebar.disabled = atStart;
+        nextBtnSidebar.disabled = atEnd;
+    }
+
+    function populateChapterList() {
+        chapterList.innerHTML = chapters.map((chapter, index) => {
+            const [title] = chapter.split('\n');
+            return title.startsWith('第') ? `<button class="chapter-item" data-index="${index}">${title}</button>` : '';
+        }).join('');
+
+        chapterList.querySelectorAll('.chapter-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                loadChapter(parseInt(e.target.getAttribute('data-index')));
+                menu.classList.remove('open');
+                document.body.classList.remove('menu-open');
+            });
+        });
+    }
+
+    function showChapterList() {
+        isInChapterListView = true;
+        prevBtnSidebar.style.display = 'none';
+        nextBtnSidebar.style.display = 'none';
+        chapterListSidebar.style.display = 'none';
+        chapterList.style.display = 'block';
+    }
+
+    function showMenuButtons() {
+        isInChapterListView = false;
+        prevBtnSidebar.style.display = 'block';
+        nextBtnSidebar.style.display = 'block';
+        chapterListSidebar.style.display = 'block';
+        chapterList.style.display = 'none';
+    }
+
+    // Load Novel Content
     const urlParams = new URLSearchParams(window.location.search);
     const fileName = urlParams.get('file');
 
@@ -93,119 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => {
                 console.error('Error loading novel content:', error);
             });
-
-        function loadChapter(index) {
-            if (index < 0 || index >= chapters.length) return;
-
-            const chapter = chapters[index];
-            const [title, ...contentLines] = chapter.split('\n');
-            if (title.startsWith('第')) {
-                const chapterTitle = title.trim();
-                const chapterContent = contentLines.join('\n').trim();
-
-                const formattedContent = chapterContent
-                    .split('\n')
-                    .map(paragraph => `<p>${paragraph.trim()}</p>`)
-                    .join('');
-
-                contentDiv.innerHTML = `
-                    <div class="chapter-title">${chapterTitle}</div>
-                    <div class="chapter-content">${formattedContent}</div>
-                `;
-
-                currentChapterIndex = index;
-                updateNavigationButtons();
-
-                contentDiv.scrollIntoView({ behavior: 'instant' });
-            }
-        }
-
-        function updateNavigationButtons() {
-            prevFooterBtn.disabled = currentChapterIndex === 0;
-            nextFooterBtn.disabled = currentChapterIndex === chapters.length - 1;
-            prevBtnSidebar.disabled = currentChapterIndex === 0;
-            nextBtnSidebar.disabled = currentChapterIndex === chapters.length - 1;
-        }
-
-        function populateChapterList() {
-            chapterList.innerHTML = chapters.map((chapter, index) => {
-                const [title] = chapter.split('\n');
-                if (title.startsWith('第')) {
-                    return `<button class="chapter-item" data-index="${index}">${title}</button>`;
-                }
-                return '';
-            }).join('');
-
-            chapterList.querySelectorAll('.chapter-item').forEach(item => {
-                item.addEventListener('click', (e) => {
-                    loadChapter(parseInt(e.target.getAttribute('data-index')));
-                    menu.classList.remove('open');
-                    document.body.classList.remove('menu-open');
-                });
-            });
-        }
-
-        function showChapterList() {
-            isInChapterListView = true;
-            prevBtnSidebar.style.display = 'none';
-            nextBtnSidebar.style.display = 'none';
-            chapterListSidebar.style.display = 'none';
-            chapterList.style.display = 'block';
-        }
-
-        function showMenuButtons() {
-            isInChapterListView = false;
-            prevBtnSidebar.style.display = 'block';
-            nextBtnSidebar.style.display = 'block';
-            chapterListSidebar.style.display = 'block';
-            chapterList.style.display = 'none';
-        }
-
-        hamburger.addEventListener('click', () => {
-            menu.classList.add('open');
-            document.body.classList.add('menu-open');
-        });
-
-        closeMenu.addEventListener('click', () => {
-            menu.classList.remove('open');
-            document.body.classList.remove('menu-open');
-        });
-
-        backBtnSidebar.addEventListener('click', () => {
-            if (isInChapterListView) {
-                showMenuButtons(); // Go back to the menu
-            } else {
-                window.location.href = 'index.html'; // Navigate back to index.html
-            }
-        });
-
-        prevBtnSidebar.addEventListener('click', () => {
-            if (currentChapterIndex > 0) {
-                loadChapter(currentChapterIndex - 1);
-            }
-        });
-
-        nextBtnSidebar.addEventListener('click', () => {
-            if (currentChapterIndex < chapters.length - 1) {
-                loadChapter(currentChapterIndex + 1);
-            }
-        });
-
-        chapterListSidebar.addEventListener('click', () => {
-            showChapterList(); // Show chapter list
-        });
-
-        prevFooterBtn.addEventListener('click', () => {
-            if (currentChapterIndex > 0) {
-                loadChapter(currentChapterIndex - 1);
-            }
-        });
-
-        nextFooterBtn.addEventListener('click', () => {
-            if (currentChapterIndex < chapters.length - 1) {
-                loadChapter(currentChapterIndex + 1);
-            }
-        });
     } else {
         contentDiv.innerHTML = '<p>Unable to load novel content.</p>';
     }
