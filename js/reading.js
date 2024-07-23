@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextFooterBtn = document.getElementById('nextChapter');
     const fontSizeSliderSidebar = document.getElementById('fontSizeSliderSidebar');
     const fontSizeInputFooter = document.getElementById('fontSizeInputFooter');
+    const fontSizeValueSidebar = document.getElementById('fontSizeValueSidebar');
 
     let chapters = [];
     let currentChapterIndex = 0;
@@ -25,11 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
     updateFontSize(defaultFontSize);
     fontSizeSliderSidebar.value = defaultFontSize;
     fontSizeInputFooter.value = defaultFontSize;
+    fontSizeValueSidebar.textContent = defaultFontSize;
 
     fontSizeSliderSidebar.addEventListener('input', (e) => {
         const size = e.target.value;
         updateFontSize(size);
         fontSizeInputFooter.value = size;
+        fontSizeValueSidebar.textContent = size;
     });
 
     fontSizeInputFooter.addEventListener('input', (e) => {
@@ -38,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateFontSize(size);
         fontSizeInputFooter.value = size;
         fontSizeSliderSidebar.value = size;
+        fontSizeValueSidebar.textContent = size;
     });
 
     const urlParams = new URLSearchParams(window.location.search);
