@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
         updateTheme(theme);
     });
 
+    menu.style.backgroundColor = '#333';
+    menu.style.color = '#fff';
+
     const updateTheme = (theme) => {
         switch(theme) {
             case 'white-black':
