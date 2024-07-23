@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超级陈大爷小说网</title>
+    <link rel="stylesheet" href="css/reading.css">
+</head>
+<body>
+    <header>
+        <button id="hamburger" class="hamburger">&#9776;</button>
+        <h1>超级陈大爷小说网</h1>
+    </header>
+
+    <aside id="menu" class="menu">
+        <button id="closeMenu" class="close-btn">关闭</button>
+        <ul> 
+            <li><button id="backBtnSidebar" class="aside-btn">返回</button></li>
+            <li><button id="prevChapterSidebar">上一章</button></li>
+            <li><button id="chapterListSidebar">章节列表</button></li>
+            <li><button id="nextChapterSidebar">下一章</button></li>
+            <div id="chapterList" class="chapter-list"></div>
+            <li>
+                <label for="fontSizeSliderSidebar">字体大小:</label>
+                <input type="range" id="fontSizeSliderSidebar" min="10" max="46" value="22">
+            </li>
+        </ul>
+    </aside>
+
+    <main>
+        <div id="content"></div>
+    </main>
+
+    <footer>
+        <button id="prevChapter" class="nav-btn">上一章</button>
+        <button id="nextChapter" class="nav-btn">下一章</button>
+        <label for="fontSizeInputFooter">字体大小:</label>
+        <input type="number" id="fontSizeInputFooter" min="10" max="46" value="22">
+
+    </footer>
+
+    <script src="js/reading.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超级陈大爷小说网</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <button id="hamburger" class="hamburger">&#9776;</button>
+        <h1>超级陈大爷小说网</h1>
+    </header>
+
+    <aside id="filter">
+        <button id="closeBtn" class="close-btn">&times;</button>
+        <div id="filter">
+            <h2>寻找小说</h2>
+            <div class="form-group">
+                <label for="search">Search</label>
+                <input type="text" id="search" placeholder="输入小说名称">
+            </div>
+            <div class="form-group">
+                <label for="sort">次序</label>
+                <select id="sort">
+                    <option value="word_high_to_low">字数最多优先</option>
+                    <option value="watch_high_to_low">观看最多优先</option>
+                </select>
+            </div>
+            <button id="filterResults">寻找小说</button>
+        </div>
+    </aside>
+
+    <main>
+        <div id="novel_card" class="novel-cards"></div>
+    </main>
+
+    <footer>
+        <p>由HSC制造 </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

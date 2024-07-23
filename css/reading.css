@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    transition: margin-left 0.3s ease; /* Add transition for smooth content shift */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.aside-btn {
+    margin-top: 30px;
+}
+
+.close-btn:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #f4f4f4;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding: 10px;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.menu.open {
+    transform: translateX(0);
+}
+
+.menu-open main {
+    margin-left: 300px; 
+}
+
+.menu-open footer {
+    margin-left: 150px; 
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu button {
+    background-color: #555;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: 1em;
+}
+
+.menu button:hover {
+    background-color: #8c00ff;
+}
+
+.menu button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+#sidebarContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.chapter-list {
+    display: none;
+    margin-top: 20px;
+}
+
+.chapter-item {
+    background: none;
+    border: none;
+    color: #333;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.chapter-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.chapter-content p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-btn {
+    background-color: #555;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 1em;
+}
+
+.nav-btn:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Additional styling for the sidebar */
+#sidebarContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chapter-list {
+    display: none;
+    margin-top: 20px;
+}
+
+.chapter-item {
+    background: none;
+    border: none;
+    color: #333;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.chapter-item:hover {
+    background-color: #8c00ff;
+}
+
+.hide {
+    display: none;
+}

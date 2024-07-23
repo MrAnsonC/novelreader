@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #f4f4f4;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.close-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+aside h2 {
+    margin-top: 60px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#filterResults {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+    margin-left: 250px; /* Space for aside */
+    display: flex;
+    justify-content: center;
+}
+
+.novel-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.novel-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.novel-card:hover {
+    transform: translateY(-5px);
+}
+
+.novel-card img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.novel-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.novel-info h1 {
+    font-size: 1.7em;
+    margin: 0 0 10px;
+}
+
+.novel-info div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.novel-info strong {
+    width: 50px; /* Adjust width to fit content better */
+    text-align: right; /* Align text to the right for labels */
+    margin-right: 10px; /* Space between label and value */
+}
+
+.novel-info h2 {
+    margin: 0;
+    flex: 1;
+    text-align: left; /* Align text to the right */
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding-bottom: 40px;
+    width: 100%;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    main {
+        margin-left: 0;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    .novel-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .novel-card img {
+        margin: 0 0 10px;
+    }
+}
