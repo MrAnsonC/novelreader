@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const fontSizeValueSidebar = document.getElementById('fontSizeValueSidebar');
     const themeSelector = document.getElementById('themeSelector');
     const textAlignSelector = document.getElementById('textAlignSelector');
-    const mainContent = document.querySelector('main');
 
     // State Variables
     let chapters = [];

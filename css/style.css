@@ -1,7 +1,11 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 header {
@@ -11,6 +15,7 @@ header {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
+    position: relative;
 }
 
 header h1 {
@@ -37,6 +42,11 @@ aside {
     transition: transform 0.3s ease;
     padding: 20px;
     z-index: 1000;
+    overflow-y: auto;
+}
+
+.aside-btn {
+    margin-top: 30px;
 }
 
 .close-btn {
@@ -80,6 +90,7 @@ aside h2 {
 }
 
 main {
+    flex: 1;
     padding: 20px;
     margin-left: 250px; /* Space for aside */
     display: flex;
@@ -138,33 +149,43 @@ main {
 }
 
 .novel-info strong {
-    width: 50px; /* Adjust width to fit content better */
-    text-align: right; /* Align text to the right for labels */
-    margin-right: 10px; /* Space between label and value */
+    width: 50px;
+    text-align: right;
+    margin-right: 10px;
 }
 
 .novel-info h2 {
     margin: 0;
     flex: 1;
-    text-align: left; /* Align text to the right */
+    text-align: left;
 }
 
 footer {
     text-align: center;
     background-color: #333;
     color: #fff;
-    padding-bottom: 40px;
+    padding: 10px;
     width: 100%;
     margin-top: auto;
 }
 
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    main {
-        margin-left: 0;
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
     }
 
     aside {
-        width: 100%;
+        width: 90%;
+        transform: translateX(0);
+    }
+
+    main {
+        margin-left: 0;
     }
 
     .novel-card {
@@ -174,5 +195,16 @@ footer {
 
     .novel-card img {
         margin: 0 0 10px;
+    }
+
+    footer {
+        position: static;
+        bottom: 0;
+        left: 0;
+        width: 95%;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
     }
 }
