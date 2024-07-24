@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const fontSizeInputFooter = document.getElementById('fontSizeInputFooter');
     const themeSelector = document.getElementById('themeSelector');
     const textAlignSelector = document.getElementById('textAlignSelector');
+    const spacingTightBtn = document.getElementById('spacingTightBtn');
+    const spacingStandardBtn = document.getElementById('spacingStandardBtn');
+    const spacingLooseBtn = document.getElementById('spacingLooseBtn');
 
     // State Variables
     let chapters = [];
@@ -26,16 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedFontSize = localStorage.getItem('fontSize');
     const savedTheme = localStorage.getItem('theme');
     const savedTextAlign = localStorage.getItem('textAlign');
+    const savedParagraphSpacing = localStorage.getItem('paragraphSpacing');
 
     // Set initial values from saved settings or defaults
     const initialFontSize = savedFontSize ? parseInt(savedFontSize) : 22;
     const initialTheme = savedTheme || 'white-black';
     const initialTextAlign = savedTextAlign || 'left';
+    const initialParagraphSpacing = savedParagraphSpacing || 'standard';
 
     // Apply saved settings
     updateFontSize(initialFontSize);
     updateTheme(initialTheme);
     updateTextAlign(initialTextAlign);
+    updateParagraphSpacing(initialParagraphSpacing);
 
     fontSizeSliderSidebar.value = initialFontSize;
     fontSizeInputFooter.value = initialFontSize;
@@ -60,6 +66,21 @@ document.addEventListener('DOMContentLoaded', () => {
         fontSizeInputFooter.value = size;
         fontSizeSliderSidebar.value = size;
         localStorage.setItem('fontSize', size);
+    });
+
+    spacingTightBtn.addEventListener('click', () => {
+        updateParagraphSpacing('tight');
+        localStorage.setItem('paragraphSpacing', 'tight');
+    });
+
+    spacingStandardBtn.addEventListener('click', () => {
+        updateParagraphSpacing('standard');
+        localStorage.setItem('paragraphSpacing', 'standard');
+    });
+
+    spacingLooseBtn.addEventListener('click', () => {
+        updateParagraphSpacing('loose');
+        localStorage.setItem('paragraphSpacing', 'loose');
     });
 
     textAlignSelector.addEventListener('change', (e) => {
@@ -110,6 +131,20 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateFontSize(size) {
         contentDiv.style.fontSize = `${size}px`;
         fontSizeValueSidebar.textContent = size;
+    }
+
+    function updateParagraphSpacing(spacing) {
+        switch (spacing) {
+            case 'tight':
+                contentDiv.style.lineHeight = '0';
+                break;
+            case 'standard':
+                contentDiv.style.lineHeight = '0.2';
+                break;
+            case 'loose':
+                contentDiv.style.lineHeight = '0.4';
+                break;
+        }
     }
 
     function updateTheme(theme) {
