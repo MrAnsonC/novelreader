@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(filePath)
             .then(response => response.text())
             .then(text => {
-                chapters = text.split(/\n(?=第\d+章 )/);
+                chapters = text.split(/\n(?=第[\d零一二三四五六七八九十点\.]+章)/);
                 loadChapter(currentChapterIndex);
                 populateChapterList();
                 updateNavigationButtons();
