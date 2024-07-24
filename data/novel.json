@@ -9,12 +9,12 @@
         }
     },
     {
-        "name": "柯南：从未来归来的工藤柯南",
-        "author": "夜月先生",
-        "platform": "起点",
+        "name": "约会大作战",
+        "author": "橘公司",
+        "platform": "日本富士見書房",
         "source": {
-            "images": "data/images/从未来归来的工藤柯南(夜月先生).jpg",
-            "resources": "data/txt/从未来归来的工藤柯南(夜月先生).txt"
+            "images": "data/images/约会大作战(橘公司).jpg",
+            "resources": "data/txt/约会大作战(橘公司).txt"
         }
     },
     {
