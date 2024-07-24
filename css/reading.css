@@ -124,6 +124,12 @@ header {
     text-align: left;
 }
 
+.special-chapter {
+    background-color: yellow;
+    color: black;
+    cursor: default;
+}
+
 main {
     flex: 1;
     padding: 20px;

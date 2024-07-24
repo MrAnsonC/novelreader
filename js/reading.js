@@ -16,9 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const fontSizeInputFooter = document.getElementById('fontSizeInputFooter');
     const themeSelector = document.getElementById('themeSelector');
     const textAlignSelector = document.getElementById('textAlignSelector');
-    const spacingTightBtn = document.getElementById('spacingTightBtn');
-    const spacingStandardBtn = document.getElementById('spacingStandardBtn');
-    const spacingLooseBtn = document.getElementById('spacingLooseBtn');
 
     // State Variables
     let chapters = [];
@@ -29,19 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedFontSize = localStorage.getItem('fontSize');
     const savedTheme = localStorage.getItem('theme');
     const savedTextAlign = localStorage.getItem('textAlign');
-    const savedParagraphSpacing = localStorage.getItem('paragraphSpacing');
 
     // Set initial values from saved settings or defaults
     const initialFontSize = savedFontSize ? parseInt(savedFontSize) : 22;
     const initialTheme = savedTheme || 'white-black';
     const initialTextAlign = savedTextAlign || 'left';
-    const initialParagraphSpacing = savedParagraphSpacing || 'standard';
 
     // Apply saved settings
     updateFontSize(initialFontSize);
     updateTheme(initialTheme);
     updateTextAlign(initialTextAlign);
-    updateParagraphSpacing(initialParagraphSpacing);
 
     fontSizeSliderSidebar.value = initialFontSize;
     fontSizeInputFooter.value = initialFontSize;
@@ -66,21 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
         fontSizeInputFooter.value = size;
         fontSizeSliderSidebar.value = size;
         localStorage.setItem('fontSize', size);
-    });
-
-    spacingTightBtn.addEventListener('click', () => {
-        updateParagraphSpacing('tight');
-        localStorage.setItem('paragraphSpacing', 'tight');
-    });
-
-    spacingStandardBtn.addEventListener('click', () => {
-        updateParagraphSpacing('standard');
-        localStorage.setItem('paragraphSpacing', 'standard');
-    });
-
-    spacingLooseBtn.addEventListener('click', () => {
-        updateParagraphSpacing('loose');
-        localStorage.setItem('paragraphSpacing', 'loose');
     });
 
     textAlignSelector.addEventListener('change', (e) => {
@@ -131,20 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateFontSize(size) {
         contentDiv.style.fontSize = `${size}px`;
         fontSizeValueSidebar.textContent = size;
-    }
-
-    function updateParagraphSpacing(spacing) {
-        switch (spacing) {
-            case 'tight':
-                contentDiv.style.lineHeight = '0';
-                break;
-            case 'standard':
-                contentDiv.style.lineHeight = '0.2';
-                break;
-            case 'loose':
-                contentDiv.style.lineHeight = '0.4';
-                break;
-        }
     }
 
     function updateTheme(theme) {
@@ -206,6 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (fileName) {
                 localStorage.setItem(`chapterIndex_${fileName}`, currentChapterIndex);
             }
+        } else {
+            console.warn(`Unexpected chapter format: ${title}`);
         }
     }
 
@@ -222,17 +189,26 @@ document.addEventListener('DOMContentLoaded', () => {
     function populateChapterList() {
         chapterList.innerHTML = chapters.map((chapter, index) => {
             const [title] = chapter.split('\n');
-            return title.startsWith('第') ? `<button class="chapter-item" data-index="${index}">${title}</button>` : '';
+            if (title.startsWith('第')) {
+                return `<button class="chapter-item" data-index="${index}">${title}</button>`;
+            }
+            else if (title.startsWith('**')) {
+                return `<button class="chapter-item special-chapter" disabled>${title.replace('**', '').trim()}</button>`;
+            }
+            return '';
         }).join('');
-
+    
         chapterList.querySelectorAll('.chapter-item').forEach(item => {
             item.addEventListener('click', (e) => {
-                loadChapter(parseInt(e.target.getAttribute('data-index')));
-                menu.classList.remove('open');
-                document.body.classList.remove('menu-open');
+                const index = parseInt(e.target.getAttribute('data-index'));
+                if (!isNaN(index)) {
+                    loadChapter(index);
+                    menu.classList.remove('open');
+                    document.body.classList.remove('menu-open');
+                }
             });
         });
-    }
+    }    
 
     function showChapterList() {
         isInChapterListView = true;
@@ -240,6 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nextBtnSidebar.style.display = 'none';
         chapterListSidebar.style.display = 'none';
         chapterList.style.display = 'block';
+        populateChapterList();
     }
 
     function showMenuButtons() {
@@ -250,35 +227,23 @@ document.addEventListener('DOMContentLoaded', () => {
         chapterList.style.display = 'none';
     }
 
-    // Load Novel Content
-    const urlParams = new URLSearchParams(window.location.search);
-    const fileName = urlParams.get('file');
-
-    // Reset chapters and current chapter index
-    chapters = [];
-    currentChapterIndex = 0;
-
-    // Retrieve saved chapter index for this book
-    const savedChapterIndex = localStorage.getItem(`chapterIndex_${fileName}`);
-    if (savedChapterIndex) {
-        currentChapterIndex = parseInt(savedChapterIndex);
-    }
-
+    // Initialize Chapter Loading
+    const fileName = new URLSearchParams(window.location.search).get('file');
     if (fileName) {
-        const filePath = `data/txt/${fileName}`;
-
-        fetch(filePath)
+        fetch(`data/txt/${fileName}`)
             .then(response => response.text())
             .then(text => {
                 chapters = text.split(/\n(?=第[\d零一二三四五六七八九十点\.]+章)/);
+                const savedChapterIndex = localStorage.getItem(`chapterIndex_${fileName}`);
+                if (savedChapterIndex) {
+                    currentChapterIndex = parseInt(savedChapterIndex);
+                } else {
+                    currentChapterIndex = 0;
+                }
                 loadChapter(currentChapterIndex);
-                populateChapterList();
-                updateNavigationButtons();
             })
-            .catch(error => {
-                console.error('Error loading novel content:', error);
-            });
+            .catch(error => console.error('Error loading chapters:', error));
     } else {
-        contentDiv.innerHTML = '<p>Unable to load novel content.</p>';
+        console.error('File name not specified in URL.');
     }
 });
