@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const state = novel.state || '未知';
 
                 card.innerHTML = `
-                    <img src="${image}" alt="${novel.name}">
+                    <img src="${image}" alt="${name}">
                     <div class="novel-info">
                         <h1>${name}</h1>
                         <div>
@@ -31,9 +31,27 @@ document.addEventListener('DOMContentLoaded', () => {
                             <strong>状态:</strong>
                             <h2>${state}</h2>
                         </div>
+                        <div>
+                            <strong>字数:</strong>
+                            <h2 class="word-count">计算中...</h2>
+                        </div>
                     </div>
                 `;
-
+                // Fetch the text file and calculate the word count
+                if (novel.source.resources) {
+                    fetch(novel.source.resources)
+                        .then(response => response.text())
+                        .then(text => {
+                            const wordCount = calculateWordCount(text);
+                            card.querySelector('.word-count').textContent = wordCount;
+                        })
+                        .catch(error => {
+                            console.error('Error loading text file:', error);
+                            card.querySelector('.word-count').textContent = '加载错误';
+                        });
+                } else {
+                    card.querySelector('.word-count').textContent = '数据缺失';
+                }
                 card.addEventListener('click', () => {
                     const filePath = novel.source.resources.split('/').pop();
                     if (filePath) {
@@ -64,3 +82,11 @@ hamburger.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     filter.style.transform = 'translateX(-100%)';
 });
+
+// Function to calculate the word count
+function calculateWordCount(text) {
+    // Remove any whitespace and newline characters
+    const trimmedText = text.replace(/\s+/g, '');
+    // Return the length of the text which represents the number of characters
+    return trimmedText.length;
+}
