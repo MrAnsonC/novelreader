@@ -3,6 +3,7 @@
         "name": "柯南：从未来归来的工藤柯南",
         "author": "夜月先生",
         "platform": "起点",
+        "state": "连载中",
         "source": {
             "images": "data/images/从未来归来的工藤柯南(夜月先生).jpg",
             "resources": "data/txt/从未来归来的工藤柯南(夜月先生).txt"
@@ -12,6 +13,7 @@
         "name": "约会大作战",
         "author": "橘公司",
         "platform": "日本富士见书房",
+        "state": "已完结",
         "source": {
             "images": "data/images/约会大作战(橘公司).jpg",
             "resources": "data/txt/约会大作战(橘公司).txt"
@@ -21,6 +23,7 @@
         "name": "此刻,全球进入恐怖时代",
         "author": "黑白茶",
         "platform": "飞卢小说",
+        "state": "已完结",
         "source": {
             "images": "data/images/此刻,全球进入恐怖时代(黑白茶).jpg",
             "resources": "data/txt/此刻,全球进入恐怖时代(黑白茶).txt"
@@ -30,36 +33,20 @@
         "name": "变成吸血姬后被校花给拐回家了",
         "author": "浮世一生繁华1",
         "platform": "番茄",
+        "state": "被封杀",
         "source": {
             "images": "data/images/变成吸血姬后被校花给拐回家了(浮世一生繁华1).jpg",
             "resources": "data/txt/变成吸血姬后被校花给拐回家了(浮世一生繁华1).txt"
         }
     },
     {
-        "name": "柯南：从未来归来的工藤柯南",
-        "author": "夜月先生",
-        "platform": "起点",
+        "name": "",
+        "author": "",
+        "platform": "",
+        "state": "",
         "source": {
-            "images": "data/images/从未来归来的工藤柯南(夜月先生).jpg",
-            "resources": "data/txt/从未来归来的工藤柯南(夜月先生).txt"
-        }
-    },
-    {
-        "name": "柯南：从未来归来的工藤柯南",
-        "author": "夜月先生",
-        "platform": "起点",
-        "source": {
-            "images": "data/images/从未来归来的工藤柯南(夜月先生).jpg",
-            "resources": "data/txt/从未来归来的工藤柯南(夜月先生).txt"
-        }
-    },
-    {
-        "name": "柯南：从未来归来的工藤柯南",
-        "author": "夜月先生",
-        "platform": "起点",
-        "source": {
-            "images": "data/images/从未来归来的工藤柯南(夜月先生).jpg",
-            "resources": "data/txt/从未来归来的工藤柯南(夜月先生).txt"
+            "images": "",
+            "resources": ""
         }
     }
 ]

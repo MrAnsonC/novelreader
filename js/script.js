@@ -9,17 +9,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 const card = document.createElement('div');
                 card.classList.add('novel-card');
 
+                const image = novel.source.images || 'data/images/未知.jpg';
+                const name = novel.name || '未知';
+                const author = novel.author || '未知';
+                const platform = novel.platform || '未知';
+                const state = novel.state || '未知';
+
                 card.innerHTML = `
-                    <img src="${novel.source.images}" alt="${novel.name}">
+                    <img src="${image}" alt="${novel.name}">
                     <div class="novel-info">
-                        <h1>${novel.name}</h1>
+                        <h1>${name}</h1>
                         <div>
                             <strong>作者:</strong>
-                            <h2>${novel.author}</h2>
+                            <h2>${author}</h2>
                         </div>
                         <div>
                             <strong>平台:</strong>
-                            <h2>${novel.platform}</h2>
+                            <h2>${platform}</h2>
+                        </div>
+                        <div>
+                            <strong>状态:</strong>
+                            <h2>${state}</h2>
                         </div>
                     </div>
                 `;
