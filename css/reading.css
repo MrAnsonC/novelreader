@@ -45,7 +45,6 @@ header {
     outline: none; /* Remove default focus outline */
 }
 
-
 .menu {
     position: fixed;
     top: 0;
@@ -206,4 +205,44 @@ input[type="range"] {
 
 .hide {
     display: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .title-link h1 {
+        font-size: 1.5em;
+    }
+
+    .menu {
+        width: 100%;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .menu.open {
+        transform: translateY(0);
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-open main,
+    .menu-open footer {
+        margin-left: 0;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .nav-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
 }
