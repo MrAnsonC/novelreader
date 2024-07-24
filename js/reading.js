@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextFooterBtn = document.getElementById('nextChapter');
     const fontSizeSliderSidebar = document.getElementById('fontSizeSliderSidebar');
     const fontSizeValueSidebar = document.getElementById('fontSizeValueSidebar');
-    const fontSizeInputFooter = document.getElementById('fontSizeInputFooter');
     const themeSelector = document.getElementById('themeSelector');
     const textAlignSelector = document.getElementById('textAlignSelector');
+    const mainContent = document.querySelector('main');
 
     // State Variables
     let chapters = [];
@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateTextAlign(initialTextAlign);
 
     fontSizeSliderSidebar.value = initialFontSize;
-    fontSizeInputFooter.value = initialFontSize;
     themeSelector.value = initialTheme;
     textAlignSelector.value = initialTextAlign;
 
@@ -50,16 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fontSizeSliderSidebar.addEventListener('input', (e) => {
         updateFontSize(e.target.value);
-        fontSizeInputFooter.value = e.target.value;
         localStorage.setItem('fontSize', e.target.value);
-    });
-
-    fontSizeInputFooter.addEventListener('input', (e) => {
-        let size = Math.max(10, Math.min(parseInt(e.target.value), 46)); // Clamp size between 10 and 46
-        updateFontSize(size);
-        fontSizeInputFooter.value = size;
-        fontSizeSliderSidebar.value = size;
-        localStorage.setItem('fontSize', size);
     });
 
     textAlignSelector.addEventListener('change', (e) => {

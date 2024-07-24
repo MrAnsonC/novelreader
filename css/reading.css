@@ -150,6 +150,7 @@ footer {
     color: #fff;
     padding: 10px;
     text-align: center;
+    display: block; /* Ensure footer is displayed by default on larger screens */
 }
 
 .nav-btn {
@@ -207,6 +208,8 @@ input[type="range"] {
     display: none;
 }
 
+/* Other existing styles */
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header {
@@ -235,6 +238,22 @@ input[type="range"] {
     .menu-open main,
     .menu-open footer {
         margin-left: 0;
+    }
+
+    footer {
+        display: none; 
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .show-footer footer {
+        display: flex; 
     }
 
     .nav-btn {
