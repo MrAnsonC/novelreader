@@ -23,13 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let isInChapterListView = false;
 
     // Retrieve saved settings from localStorage
-    const savedChapterIndex = localStorage.getItem('currentChapterIndex');
     const savedFontSize = localStorage.getItem('fontSize');
     const savedTheme = localStorage.getItem('theme');
     const savedTextAlign = localStorage.getItem('textAlign');
 
     // Set initial values from saved settings or defaults
-    currentChapterIndex = savedChapterIndex ? parseInt(savedChapterIndex) : 0;
     const initialFontSize = savedFontSize ? parseInt(savedFontSize) : 22;
     const initialTheme = savedTheme || 'white-black';
     const initialTextAlign = savedTextAlign || 'left';
@@ -167,6 +165,12 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('currentChapterIndex', currentChapterIndex);
             updateNavigationButtons();
             contentDiv.scrollIntoView({ behavior: 'instant' });
+
+            // Save current chapter index for this book
+            const fileName = new URLSearchParams(window.location.search).get('file');
+            if (fileName) {
+                localStorage.setItem(`chapterIndex_${fileName}`, currentChapterIndex);
+            }
         }
     }
 
@@ -214,6 +218,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load Novel Content
     const urlParams = new URLSearchParams(window.location.search);
     const fileName = urlParams.get('file');
+
+    // Reset chapters and current chapter index
+    chapters = [];
+    currentChapterIndex = 0;
+
+    // Retrieve saved chapter index for this book
+    const savedChapterIndex = localStorage.getItem(`chapterIndex_${fileName}`);
+    if (savedChapterIndex) {
+        currentChapterIndex = parseInt(savedChapterIndex);
+    }
 
     if (fileName) {
         const filePath = `data/txt/${fileName}`;
