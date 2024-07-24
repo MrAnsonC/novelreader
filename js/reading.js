@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fontSizeValueSidebar = document.getElementById('fontSizeValueSidebar');
     const fontSizeInputFooter = document.getElementById('fontSizeInputFooter');
     const themeSelector = document.getElementById('themeSelector');
+    const textAlignSelector = document.getElementById('textAlignSelector');
 
     // State Variables
     let chapters = [];
@@ -25,18 +26,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedChapterIndex = localStorage.getItem('currentChapterIndex');
     const savedFontSize = localStorage.getItem('fontSize');
     const savedTheme = localStorage.getItem('theme');
+    const savedTextAlign = localStorage.getItem('textAlign');
 
     // Set initial values from saved settings or defaults
     currentChapterIndex = savedChapterIndex ? parseInt(savedChapterIndex) : 0;
     const initialFontSize = savedFontSize ? parseInt(savedFontSize) : 22;
     const initialTheme = savedTheme || 'white-black';
+    const initialTextAlign = savedTextAlign || 'left';
 
     // Apply saved settings
     updateFontSize(initialFontSize);
     updateTheme(initialTheme);
+    updateTextAlign(initialTextAlign);
+
     fontSizeSliderSidebar.value = initialFontSize;
     fontSizeInputFooter.value = initialFontSize;
     themeSelector.value = initialTheme;
+    textAlignSelector.value = initialTextAlign;
 
     // Event Listeners
     themeSelector.addEventListener('change', (e) => {
@@ -56,6 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
         fontSizeInputFooter.value = size;
         fontSizeSliderSidebar.value = size;
         localStorage.setItem('fontSize', size);
+    });
+
+    textAlignSelector.addEventListener('change', (e) => {
+        updateTextAlign(e.target.value);
+        localStorage.setItem('textAlign', e.target.value);
     });
 
     hamburger.addEventListener('click', () => {
@@ -126,6 +137,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.color = '#000';
                 break;
         }
+    }
+
+    function updateTextAlign(alignment) {
+        contentDiv.style.textAlign = alignment;
     }
 
     function loadChapter(index) {
