@@ -1,9 +1,31 @@
 @echo off
-set /p message="Enter the commit message: "
-if "%message%"=="" set "message=Update latest action"
+echo Choose a commit message:
+echo 1. index page update
+echo 2. reading page update
+echo 3. novel update
+echo 4. Enter other message
 
+:Prompt
+set /p choice="Enter the number corresponding to your choice: "
+
+if "%choice%"=="1" set "message=index page update"
+if "%choice%"=="2" set "message=reading page update"
+if "%choice%"=="3" goto NovelChoice
+if "%choice%"=="4" set /p message="Enter your custom commit message: "
+
+goto Continue
+
+:NovelChoice
+echo Choose a novel update message:
+echo 1. 约会大作战
+echo 2. 从未来归来的工藤柯南
+set /p novelChoice="Enter the number corresponding to your choice: "
+if "%novelChoice%"=="1" set "message=约会大作战 小说更新啦！"
+if "%novelChoice%"=="2" set "message=从未来归来的工藤柯南 小说更新啦"
+goto Continue
+
+:Continue
 cd %CD%
 git add .
 git commit -m "%message%"
 git push
-
