@@ -98,5 +98,15 @@
             "images": "data/images/柯南之薄荷味白鲸(白鲸薄荷糖).jpg",
             "resources": "data/txt/柯南之薄荷味白鲸(白鲸薄荷糖).txt"
         }
+    },
+    {
+        "name": "驭龙师最弱职业？我契约清冷校花",
+        "author": "白骨青灰",
+        "platform": "番茄",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/驭龙师最弱职业？我契约清冷校花(白骨青灰).jpg",
+            "resources": "data/txt/驭龙师最弱职业？我契约清冷校花(白骨青灰).txt"
+        }
     }
 ]
