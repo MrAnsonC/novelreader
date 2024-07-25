@@ -35,6 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
         displayNovels(filteredNovels);
     });
 
+    document.getElementById('resetFilters').addEventListener('click', () => {
+        document.getElementById('search').value = '';
+        document.getElementById('sort').value = 'word_high_to_low';
+        document.getElementById('platform').value = 'all';
+        document.getElementById('state').value = 'all';
+
+        displayNovels(novels); // Display all novels after reset
+    });
+
     const hamburger = document.getElementById('hamburger');
     const filter = document.getElementById('filter');
     const closeBtn = document.getElementById('closeBtn');
