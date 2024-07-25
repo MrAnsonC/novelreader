@@ -68,5 +68,15 @@
             "images": "data/images/全球通缉：开局五星级越狱(云中暮雪).jpg",
             "resources": "data/txt/全球通缉：开局五星级越狱(云中暮雪).txt"
         }
+    },
+    {
+        "name": "全球捉迷藏：开局获得作弊模式！",
+        "author": "娱乐天王",
+        "platform": "番茄",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/全球捉迷藏：开局获得作弊模式！（娱乐天王）.jpg",
+            "resources": "data/txt/全球捉迷藏：开局获得作弊模式！（娱乐天王）.txt"
+        }
     }
 ]

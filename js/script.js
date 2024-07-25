@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     let novels = [];
     let isSearchClicked = false;
-
+    let isFirstIn = true;
 
     fetch('data/novel.json')
         .then(response => response.json())
@@ -156,10 +156,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         const wordCount = calculateWordCount(text);
                         const formattedWordCount = wordCount.toLocaleString(); // Format with commas
                         const randomDelay = Math.floor(Math.random() * (2000 - 100 + 1)) + 100;
-                        setTimeout(() => {
+                        if (isFirstIn){
+                            setTimeout(() => {
+                                card.querySelector('.word-count').textContent = formattedWordCount;
+                                novel.wordCount = wordCount;
+                                isFirstIn = false;
+                            }, randomDelay);
+                        }else{
                             card.querySelector('.word-count').textContent = formattedWordCount;
                             novel.wordCount = wordCount;
-                        }, randomDelay);
+                        }
                         novel.wordCount = wordCount; // Store word count in novel object
                     })
                     .catch(error => {
