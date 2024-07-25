@@ -87,6 +87,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('filter').style.transform = 'translateX(-100%)';
             });
         });
+
+        document.getElementById('resetFilters').addEventListener('click', () => {
+            document.getElementById('search').value = '';
+            document.getElementById('sort').value = 'word_high_to_low';
+            document.getElementById('platform').value = 'all';
+            document.getElementById('state').value = 'all';
+            isSearchClicked = false;
+            displayNovels(novels); // Display all novels after reset
+        });
         
 
     const hamburger = document.getElementById('hamburger');
@@ -146,7 +155,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     .then(text => {
                         const wordCount = calculateWordCount(text);
                         const formattedWordCount = wordCount.toLocaleString(); // Format with commas
-                        card.querySelector('.word-count').textContent = formattedWordCount;
+                        const randomDelay = Math.floor(Math.random() * (2000 - 100 + 1)) + 100;
+                        setTimeout(() => {
+                            card.querySelector('.word-count').textContent = formattedWordCount;
+                            novel.wordCount = wordCount;
+                        }, randomDelay);
                         novel.wordCount = wordCount; // Store word count in novel object
                     })
                     .catch(error => {
