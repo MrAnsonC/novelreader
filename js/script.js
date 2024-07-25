@@ -14,11 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const sortValue = document.getElementById('sort').value;
         const platformValue = document.getElementById('platform').value;
         const stateValue = document.getElementById('state').value;
-        
+
         let filteredNovels = novels.filter(novel => {
-            return (novel.name.toLowerCase().includes(searchValue) || searchValue === "") &&
-                   (novel.platform === platformValue || platformValue === "all") &&
-                   (novel.state === stateValue || stateValue === "all");
+            const matchesSearch = novel.name.toLowerCase().includes(searchValue) || searchValue === "";
+            const matchesPlatform = platformValue === "all" || (platformValue === "其他"
+                ? !["番茄", "飞卢小说", "起点", "QQ阅读"].includes(novel.platform) : novel.platform === platformValue);
+            const matchesState = stateValue === "all" ||
+                (stateValue === "断更/被封杀" ? (novel.state === "断更" || novel.state === "被封杀") : novel.state === stateValue) ||
+                (stateValue === "其他" ? !["已完结", "连载中", "断更", "被封杀"].includes(novel.state) 
+                    : novel.state === stateValue);
+            return matchesSearch && matchesPlatform && matchesState;
         });
 
         if (sortValue === 'word_high_to_low') {
