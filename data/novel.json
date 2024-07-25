@@ -40,6 +40,16 @@
         }
     },
     {
+        "name": "天命出马仙",
+        "author": "吴半仙",
+        "platform": "番茄",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/天命出马仙(吴半仙).jpg",
+            "resources": "data/txt/天命出马仙(吴半仙).txt"
+        }
+    },
+    {
         "name": "",
         "author": "",
         "platform": "",
