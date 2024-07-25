@@ -78,5 +78,25 @@
             "images": "data/images/全球捉迷藏：开局获得作弊模式！（娱乐天王）.jpg",
             "resources": "data/txt/全球捉迷藏：开局获得作弊模式！（娱乐天王）.txt"
         }
+    },
+    {
+        "name": "身为男生志愿填魔女学院很奇怪！",
+        "author": "杨月涵",
+        "platform": "菠蘿包輕小説",
+        "state": "连载中",
+        "source": {
+            "images": "data/images/身为男生志愿填魔女学院很奇怪(杨月涵).jpg",
+            "resources": "data/txt/身为男生志愿填魔女学院很奇怪(杨月涵).txt"
+        }
+    },
+    {
+        "name": "柯南之薄荷味白鲸",
+        "author": "白鲸薄荷糖",
+        "platform": "起点",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/柯南之薄荷味白鲸(白鲸薄荷糖).jpg",
+            "resources": "data/txt/柯南之薄荷味白鲸(白鲸薄荷糖).txt"
+        }
     }
 ]
