@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function displayNovels(novels) {
+        shuffleArray(novels);
         const novelCardsContainer = document.getElementById('novel_card');
         novelCardsContainer.innerHTML = '';
 
@@ -126,4 +127,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const trimmedText = text.replace(/\s+/g, '');
         return trimmedText.length;
     }
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+        }
+    }
+    
 });
