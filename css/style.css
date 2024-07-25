@@ -189,7 +189,7 @@ footer {
     }
 
     aside {
-        width: 90%;
+        width: auto;
     }
 
     main {
@@ -197,45 +197,53 @@ footer {
     }
 
     .novel-card {
-        flex-direction: row;
+        flex-direction: column; /* Change direction to column */
         align-items: center;
     }
 
     .novel-card img {
-        margin: 0 0 10px;
+        width: 100%; /* Make the image take full width */
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .novel-info {
+        width: 100%; /* Ensure the novel info takes the full width */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .novel-info div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
     }
 
     .novel-info strong {
-        width: 50px;
-        text-align: right;
-        margin-top: 8px;
+        width: auto; /* Adjust to fit content */
+        text-align: left; /* Align text to left */
         margin-right: 10px;
     }
 
     .novel-info h1 {
+        font-size: 1.2em; /* Adjust title size */
         margin: 0;
-        flex: 1;
-        text-align: left;
-    }
-    
-    .novel-info h2 {
-        margin: 0;
-        flex: 1;
-        margin-top: 8px;
-        text-align: left;
+        text-align: center;
     }
 
-    .novel-info {
-        flex: 1;
-        font-size: 1.25em;
-        padding-left: 3rem;
+    .novel-info h2 {
+        margin: 0;
+        text-align: left;
+        margin-top: 10px;
     }
 
     footer {
         position: static;
         bottom: 0;
         left: 0;
-        width: 95%;
+        width: 100%;
         background-color: #333;
         color: #fff;
         padding: 10px;
