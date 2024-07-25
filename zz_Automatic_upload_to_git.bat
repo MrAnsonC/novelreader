@@ -5,6 +5,7 @@ echo 2. reading page update
 echo 3. novel update
 echo 4. Enter other message
 
+
 :Prompt
 set /p choice="Enter the number corresponding to your choice: "
 
