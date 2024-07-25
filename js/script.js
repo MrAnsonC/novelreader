@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         displayNovels(filteredNovels);
+        document.getElementById('filter').style.transform = 'translateX(-100%)';
     });
 
     document.getElementById('resetFilters').addEventListener('click', () => {
@@ -96,7 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     .then(response => response.text())
                     .then(text => {
                         const wordCount = calculateWordCount(text);
-                        card.querySelector('.word-count').textContent = wordCount;
+                        const formattedWordCount = wordCount.toLocaleString(); // Format with commas
+                        card.querySelector('.word-count').textContent = formattedWordCount;
                         novel.wordCount = wordCount; // Store word count in novel object
                     })
                     .catch(error => {
