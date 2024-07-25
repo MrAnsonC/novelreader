@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${image}" alt="${name}">
                     <div class="novel-info">
                         <h1>${name}</h1>
+                        <h2> </h2>
                         <div>
                             <strong>作者:</strong>
                             <h2>${author}</h2>

@@ -140,6 +140,7 @@ main {
 .novel-info h1 {
     font-size: 1.7em;
     margin: 0 0 10px;
+    align-items: center;
 }
 
 .novel-info div {
@@ -151,12 +152,20 @@ main {
 .novel-info strong {
     width: 50px;
     text-align: right;
+    margin-top: 8px;
     margin-right: 10px;
+}
+
+.novel-info h1 {
+    margin: 0;
+    flex: 1;
+    text-align: center;
 }
 
 .novel-info h2 {
     margin: 0;
     flex: 1;
+    margin-top: 8px;
     text-align: left;
 }
 
@@ -181,7 +190,6 @@ footer {
 
     aside {
         width: 90%;
-        transform: translateX(0);
     }
 
     main {
@@ -189,12 +197,38 @@ footer {
     }
 
     .novel-card {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
     .novel-card img {
         margin: 0 0 10px;
+    }
+
+    .novel-info strong {
+        width: 50px;
+        text-align: right;
+        margin-top: 8px;
+        margin-right: 10px;
+    }
+
+    .novel-info h1 {
+        margin: 0;
+        flex: 1;
+        text-align: left;
+    }
+    
+    .novel-info h2 {
+        margin: 0;
+        flex: 1;
+        margin-top: 8px;
+        text-align: left;
+    }
+
+    .novel-info {
+        flex: 1;
+        font-size: 1.25em;
+        padding-left: 3rem;
     }
 
     footer {
