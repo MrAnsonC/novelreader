@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     let novels = [];
+    let isSearchClicked = false;
+
 
     fetch('data/novel.json')
         .then(response => response.json())
@@ -9,41 +11,83 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error loading novel data:', error));
 
-    document.getElementById('filterResults').addEventListener('click', () => {
-        const searchValue = document.getElementById('search').value.toLowerCase();
-        const sortValue = document.getElementById('sort').value;
-        const platformValue = document.getElementById('platform').value;
-        const stateValue = document.getElementById('state').value;
-
-        let filteredNovels = novels.filter(novel => {
-            const matchesSearch = novel.name.toLowerCase().includes(searchValue) || searchValue === "";
-            const matchesPlatform = platformValue === "all" || (platformValue === "其他"
-                ? !["番茄", "飞卢小说", "起点", "QQ阅读"].includes(novel.platform) : novel.platform === platformValue);
-            const matchesState = stateValue === "all" ||
-                (stateValue === "断更/被封杀" ? (novel.state === "断更" || novel.state === "被封杀") : novel.state === stateValue) ||
-                (stateValue === "其他" ? !["已完结", "连载中", "断更", "被封杀"].includes(novel.state) 
+        document.getElementById('filterResults').addEventListener('click', () => {
+            const searchValue = document.getElementById('search').value.toLowerCase();
+            const sortValue = document.getElementById('sort').value;
+            const platformValue = document.getElementById('platform').value;
+            const stateValue = document.getElementById('state').value;
+        
+            let filteredNovels = novels.filter(novel => {
+                const matchesSearch = novel.name.toLowerCase().includes(searchValue) || searchValue === "";
+                const matchesPlatform = platformValue === "all" || (platformValue === "其他" 
+                    ? !["番茄", "飞卢小说", "起点", "QQ阅读"].includes(novel.platform) 
+                    : novel.platform === platformValue);
+                const matchesState = stateValue === "all" || 
+                    (stateValue === "断更/被封杀" ? (novel.state === "断更" || novel.state === "被封杀") : novel.state === stateValue) || 
+                    (stateValue === "其他" ? !["已完结", "连载中", "断更", "被封杀"].includes(novel.state) 
                     : novel.state === stateValue);
-            return matchesSearch && matchesPlatform && matchesState;
+        
+                return matchesSearch && matchesPlatform && matchesState;
+            });
+        
+            // Sorting
+            if (sortValue === 'word_high_to_low') {
+                filteredNovels.sort((a, b) => (b.wordCount || 0) - (a.wordCount || 0));
+            } else if (sortValue === 'word_low_to_high') {
+                filteredNovels.sort((a, b) => (a.wordCount || 0) - (b.wordCount || 0));
+            }
+        
+            displayNovels(filteredNovels);
+            document.getElementById('filter').style.transform = 'translateX(-100%)';
         });
+        
 
-        if (sortValue === 'word_high_to_low') {
-            filteredNovels.sort((a, b) => b.wordCount - a.wordCount);
-        } else if (sortValue === 'word_low_to_high') {
-            filteredNovels.sort((a, b) => a.wordCount - b.wordCount);
-        }
+        document.getElementById('filterResults').addEventListener('click', () => {
+            isSearchClicked = true;
 
-        displayNovels(filteredNovels);
-        document.getElementById('filter').style.transform = 'translateX(-100%)';
-    });
-
-    document.getElementById('resetFilters').addEventListener('click', () => {
-        document.getElementById('search').value = '';
-        document.getElementById('sort').value = 'word_high_to_low';
-        document.getElementById('platform').value = 'all';
-        document.getElementById('state').value = 'all';
-
-        displayNovels(novels); // Display all novels after reset
-    });
+            const searchValue = document.getElementById('search').value.toLowerCase();
+            const sortValue = document.getElementById('sort').value;
+            const platformValue = document.getElementById('platform').value;
+            const stateValue = document.getElementById('state').value;
+        
+            let filteredNovels = novels.filter(novel => {
+                const matchesSearch = novel.name.toLowerCase().includes(searchValue) || searchValue === "";
+                const matchesPlatform = platformValue === "all" || (platformValue === "其他"
+                    ? !["番茄", "飞卢小说", "起点", "QQ阅读"].includes(novel.platform) : novel.platform === platformValue);
+                const matchesState = stateValue === "all" ||
+                    (stateValue === "断更/被封杀" ? (novel.state === "断更" || novel.state === "被封杀") : novel.state === stateValue) ||
+                    (stateValue === "其他" ? !["已完结", "连载中", "断更", "被封杀"].includes(novel.state) 
+                        : novel.state === stateValue);
+                return matchesSearch && matchesPlatform && matchesState;
+            });
+        
+            // Wait for all word counts to be updated before sorting
+            const wordCountPromises = filteredNovels.map(novel => {
+                if (novel.source.resources) {
+                    return fetch(novel.source.resources)
+                        .then(response => response.text())
+                        .then(text => {
+                            novel.wordCount = calculateWordCount(text);
+                            return novel;
+                        });
+                } else {
+                    novel.wordCount = 0; // Default value if resources are missing
+                    return Promise.resolve(novel);
+                }
+            });
+        
+            Promise.all(wordCountPromises).then(updatedNovels => {
+                if (sortValue === 'word_high_to_low') {
+                    updatedNovels.sort((a, b) => b.wordCount - a.wordCount);
+                } else if (sortValue === 'word_low_to_high') {
+                    updatedNovels.sort((a, b) => a.wordCount - b.wordCount);
+                }
+        
+                displayNovels(updatedNovels);
+                document.getElementById('filter').style.transform = 'translateX(-100%)';
+            });
+        });
+        
 
     const hamburger = document.getElementById('hamburger');
     const filter = document.getElementById('filter');
@@ -58,20 +102,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function displayNovels(novels) {
-        shuffleArray(novels);
+        if (!isSearchClicked) {
+            shuffleArray(novels);
+        }
+
         const novelCardsContainer = document.getElementById('novel_card');
         novelCardsContainer.innerHTML = '';
-
+    
         novels.forEach(novel => {
             const card = document.createElement('div');
             card.classList.add('novel-card');
-
+    
             const image = novel.source.images || 'data/images/未知.jpg';
             const name = novel.name || '未知';
             const author = novel.author || '未知';
             const platform = novel.platform || '未知';
             const state = novel.state || '未知';
-
+    
             card.innerHTML = `
                 <div class="novel-image-container">
                     <img src="${image}" alt="${name}">
@@ -92,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
             `;
-            
+    
             if (novel.source.resources) {
                 fetch(novel.source.resources)
                     .then(response => response.text())
@@ -109,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 card.querySelector('.word-count').textContent = '数据缺失';
             }
-
+    
             card.addEventListener('click', () => {
                 const filePath = novel.source.resources.split('/').pop();
                 if (filePath) {
@@ -118,10 +165,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.error('File path is undefined.');
                 }
             });
-
+    
             novelCardsContainer.appendChild(card);
         });
     }
+    
 
     function calculateWordCount(text) {
         const trimmedText = text.replace(/\s+/g, '');
