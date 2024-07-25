@@ -18,10 +18,10 @@ goto Continue
 
 :NovelChoice
 echo Choose a novel update message:
-echo 1. 约会大作战
+echo 1. 守水库？我守的是时间长河！
 echo 2. 从未来归来的工藤柯南
 set /p novelChoice="Enter the number corresponding to your choice: "
-if "%novelChoice%"=="1" set "message=约会大作战 小说更新啦！"
+if "%novelChoice%"=="1" set "message=守水库？我守的是时间长河！ 小说更新啦！"
 if "%novelChoice%"=="2" set "message=从未来归来的工藤柯南 小说更新啦"
 goto Continue
 
