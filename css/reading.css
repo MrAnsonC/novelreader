@@ -215,6 +215,10 @@ input[type="range"] {
         align-items: flex-start;
     }
 
+    .menu-open main {
+        margin-left: 0px; 
+    }
+
     footer {
         position: static;
         bottom: 0;
