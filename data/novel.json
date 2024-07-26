@@ -108,5 +108,15 @@
             "images": "data/images/驭龙师最弱职业？我契约清冷校花(白骨青灰).jpg",
             "resources": "data/txt/驭龙师最弱职业？我契约清冷校花(白骨青灰).txt"
         }
+    },
+    {
+        "name": "我在精神病院学斩神",
+        "author": "三九音域",
+        "platform": "番茄",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/我在精神病院学斩神(三九音域).jpg",
+            "resources": "data/txt/我在精神病院学斩神(三九音域).txt"
+        }
     }
 ]
