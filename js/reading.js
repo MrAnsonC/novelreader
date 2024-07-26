@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
         chapterList.innerHTML = chapters.map((chapter, index) => {
             const [title] = chapter.split('\n');
             if (title.startsWith('第')) {
-                return `<button class="chapter-item" data-index="${index}">${title}</button>`;
+                return `<button class="chapter-item" data-index="${index}">${title.trim()}</button>`;
             }
             else if (title.startsWith('**')) {
                 return `<button class="chapter-item special-chapter" disabled>${title.replace('**', '').trim()}</button>`;
@@ -222,7 +222,8 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(`data/txt/${fileName}`)
             .then(response => response.text())
             .then(text => {
-                chapters = text.split(/\n(?=第[\d零一二三四五六七八九十点\.]+章)/);
+                // Split text into chapters based on the chapter titles
+                chapters = text.split(/\n(?=第[\d零一二三四五六七八九十点\.]+章)/).map(chapter => chapter.trim());
                 const savedChapterIndex = localStorage.getItem(`chapterIndex_${fileName}`);
                 if (savedChapterIndex) {
                     currentChapterIndex = parseInt(savedChapterIndex);

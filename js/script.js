@@ -111,9 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function displayNovels(novels) {
-        if (!isSearchClicked) {
-            shuffleArray(novels);
-        }
+        //if (!isSearchClicked) {
+            //shuffleArray(novels);
+        //}
 
         const novelCardsContainer = document.getElementById('novel_card');
         novelCardsContainer.innerHTML = '';
