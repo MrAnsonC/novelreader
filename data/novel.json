@@ -6,7 +6,7 @@
         "state": "连载中",
         "source": {
             "images": "data/images/从未来归来的工藤柯南(夜月先生).jpg",
-            "resources": "data/txt/从未来归来的工藤柯南(夜月先生).txt"
+            "resources": "data/txt/连载中-从未来归来的工藤柯南(夜月先生).txt"
         }
     },
     {
@@ -16,7 +16,7 @@
         "state": "连载中",
         "source": {
             "images": "data/images/守水库？我守的是时间长河！(摘星的狸猫 著).jpg",
-            "resources": "data/txt/守水库？我守的是时间长河！(摘星的狸猫 著).txt"
+            "resources": "data/txt/连载中-守水库？我守的是时间长河！(摘星的狸猫 著).txt"
         }
     },
     {
@@ -26,7 +26,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/约会大作战(橘公司).jpg",
-            "resources": "data/txt/约会大作战(橘公司).txt"
+            "resources": "data/txt/已完结-约会大作战(橘公司).txt"
         }
     },
     {
@@ -36,7 +36,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/此刻,全球进入恐怖时代(黑白茶).jpg",
-            "resources": "data/txt/此刻,全球进入恐怖时代(黑白茶).txt"
+            "resources": "data/txt/已完结-此刻,全球进入恐怖时代(黑白茶).txt"
         }
     },
     {
@@ -46,7 +46,7 @@
         "state": "被封杀",
         "source": {
             "images": "data/images/变成吸血姬后被校花给拐回家了(浮世一生繁华1).jpg",
-            "resources": "data/txt/变成吸血姬后被校花给拐回家了(浮世一生繁华1).txt"
+            "resources": "data/txt/被封杀-变成吸血姬后被校花给拐回家了(浮世一生繁华1).txt"
         }
     },
     {
@@ -56,7 +56,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/天命出马仙(吴半仙).jpg",
-            "resources": "data/txt/天命出马仙(吴半仙).txt"
+            "resources": "data/txt/已完结-天命出马仙(吴半仙).txt"
         }
     },
     {
@@ -66,7 +66,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/全球通缉：开局五星级越狱(云中暮雪).jpg",
-            "resources": "data/txt/全球通缉：开局五星级越狱(云中暮雪).txt"
+            "resources": "data/txt/已完结-全球通缉：开局五星级越狱(云中暮雪).txt"
         }
     },
     {
@@ -76,7 +76,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/全球捉迷藏：开局获得作弊模式！（娱乐天王）.jpg",
-            "resources": "data/txt/全球捉迷藏：开局获得作弊模式！（娱乐天王）.txt"
+            "resources": "data/txt/已完结-全球捉迷藏：开局获得作弊模式！（娱乐天王）.txt"
         }
     },
     {
@@ -86,7 +86,7 @@
         "state": "连载中",
         "source": {
             "images": "data/images/身为男生志愿填魔女学院很奇怪(杨月涵).jpg",
-            "resources": "data/txt/身为男生志愿填魔女学院很奇怪(杨月涵).txt"
+            "resources": "data/txt/连载中-身为男生志愿填魔女学院很奇怪(杨月涵).txt"
         }
     },
     {
@@ -96,7 +96,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/柯南之薄荷味白鲸(白鲸薄荷糖).jpg",
-            "resources": "data/txt/柯南之薄荷味白鲸(白鲸薄荷糖).txt"
+            "resources": "data/txt/已完结-柯南之薄荷味白鲸(白鲸薄荷糖).txt"
         }
     },
     {
@@ -106,7 +106,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/驭龙师最弱职业？我契约清冷校花(白骨青灰).jpg",
-            "resources": "data/txt/驭龙师最弱职业？我契约清冷校花(白骨青灰).txt"
+            "resources": "data/txt/已完结-驭龙师最弱职业？我契约清冷校花(白骨青灰).txt"
         }
     },
     {
@@ -116,7 +116,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/我在精神病院学斩神(三九音域).jpg",
-            "resources": "data/txt/我在精神病院学斩神(三九音域).txt"
+            "resources": "data/txt/已完结-我在精神病院学斩神(三九音域).txt"
         }
     }
 ]
