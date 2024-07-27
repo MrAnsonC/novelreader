@@ -238,7 +238,7 @@ input[type="range"] {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header {
-        padding: 10px;
+        margin-top: 0px;
     }
 
     .title-link h1 {
@@ -265,12 +265,10 @@ input[type="range"] {
         width: 95%;
         background-color: #333;
         color: #fff;
-        padding: 10px;
         text-align: center;
     }
 
     .nav-btn {
-        width: 49%;
-        margin: 5px 0;
+        width: 45%;
     }
 }
