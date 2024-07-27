@@ -201,24 +201,5 @@ document.addEventListener('DOMContentLoaded', () => {
             [array[i], array[j]] = [array[j], array[i]]; // Swap elements
         }
     }
-
-    function enterFullscreen() {
-        const elem = document.documentElement;
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-        } else if (elem.mozRequestFullScreen) { // Firefox
-            elem.mozRequestFullScreen();
-        } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-            elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) { // IE/Edge
-            elem.msRequestFullscreen();
-        }
-    }
-    
-    // Automatically enter fullscreen mode on mobile devices
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        window.addEventListener('load', enterFullscreen);
-    }
-    
     
 });
