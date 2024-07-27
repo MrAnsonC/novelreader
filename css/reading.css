@@ -102,6 +102,10 @@ header {
     margin-left: 22%; 
 }
 
+.menu-open footer {
+    margin-left: 20%; 
+}
+
 .menu ul {
     list-style-type: none;
     padding: 0;
@@ -234,6 +238,33 @@ input[type="range"] {
 .chapter-item:hover {
     background-color: #8c00ff;
 }
+
+/* Font */
+@font-face {
+    font-family: 'NotoSerifSC'; 
+    src: url('fonts/NotoSerifSC.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MaShanZheng'; 
+    src: url('fonts/MaShanZheng.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LongCang'; 
+    src: url('fonts/LongCang.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ZCOOLKuaiLe'; 
+    src: url('fonts/ZCOOLKuaiLe.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: ''; 
+    src: url('fonts/') format('truetype');
+}
+
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
