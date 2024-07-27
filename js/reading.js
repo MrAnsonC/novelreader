@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const fontSizeValueSidebar = document.getElementById('fontSizeValueSidebar');
     const themeSelector = document.getElementById('themeSelector');
     const textAlignSelector = document.getElementById('textAlignSelector');
+    const textStyleSelector = document.getElementById('textStyleSelector');
+    const textFamilySelector = document.getElementById('textFamilySelector');
 
     // State Variables
     let chapters = [];
@@ -25,20 +27,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedFontSize = localStorage.getItem('fontSize');
     const savedTheme = localStorage.getItem('theme');
     const savedTextAlign = localStorage.getItem('textAlign');
+    const savedTextStyle = localStorage.getItem('textStyle');
+    const savedTextFamily = localStorage.getItem('textFamily');
 
     // Set initial values from saved settings or defaults
     const initialFontSize = savedFontSize ? parseInt(savedFontSize) : 22;
     const initialTheme = savedTheme || 'white-black';
     const initialTextAlign = savedTextAlign || 'left';
+    const initialTextStyle = savedTextStyle || 'normal';
+    const initialTextFamily = savedTextFamily || 'serif';
 
     // Apply saved settings
     updateFontSize(initialFontSize);
     updateTheme(initialTheme);
     updateTextAlign(initialTextAlign);
+    updateTextStyle(initialTextStyle);
+    updateTextFamily(initialTextFamily);
 
     fontSizeSliderSidebar.value = initialFontSize;
     themeSelector.value = initialTheme;
     textAlignSelector.value = initialTextAlign;
+    textStyleSelector.value = initialTextStyle;
+    textFamilySelector.value = initialTextFamily;
 
     // Event Listeners
     themeSelector.addEventListener('change', (e) => {
@@ -54,6 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
     textAlignSelector.addEventListener('change', (e) => {
         updateTextAlign(e.target.value);
         localStorage.setItem('textAlign', e.target.value);
+    });
+
+    textFamilySelector.addEventListener('change', (e) => {
+        updateTextFamily(e.target.value);
+        localStorage.setItem('textFamily', e.target.value);
     });
 
     hamburger.addEventListener('click', () => {
@@ -91,6 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentChapterIndex < chapters.length - 1) loadChapter(currentChapterIndex + 1);
     });
 
+    textStyleSelector.addEventListener('change', (e) => {
+        updateTextStyle(e.target.value);
+        localStorage.setItem('textStyle', e.target.value);
+    });
+
     // Set menu styles
     menu.style.backgroundColor = '#333';
     menu.style.color = '#fff';
@@ -101,6 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
         fontSizeValueSidebar.textContent = size;
     }
 
+    function updateTextFamily(family) {
+        contentDiv.style.fontFamily = family;
+    }
+
+    // Function to update backgrond color
     function updateTheme(theme) {
         switch (theme) {
             case 'white-black':
@@ -122,6 +147,37 @@ document.addEventListener('DOMContentLoaded', () => {
             default:
                 document.body.style.backgroundColor = '#fff';
                 document.body.style.color = '#000';
+                break;
+        }
+    }
+
+    // Function to update the text style
+    function updateTextStyle(style) {
+        switch (style) {
+            case 'normal':
+                contentDiv.style.fontStyle = 'normal';
+                contentDiv.style.fontWeight = 'normal';
+                break;
+            case 'bold':
+                contentDiv.style.fontStyle = 'normal';
+                contentDiv.style.fontWeight = 'bold';
+                break;
+            case 'boldItalic':
+                contentDiv.style.fontStyle = 'italic';
+                contentDiv.style.fontWeight = 'bold';
+                break;
+            case 'sans-serif':
+                contentDiv.style.fontFamily = 'sans-serif';
+                break;
+            case 'monospace':
+                contentDiv.style.fontFamily = 'monospace';
+                break;
+            case 'serif':
+                contentDiv.style.fontFamily = 'serif';
+                break;
+            default:
+                contentDiv.style.fontStyle = 'normal';
+                contentDiv.style.fontWeight = 'normal';
                 break;
         }
     }
