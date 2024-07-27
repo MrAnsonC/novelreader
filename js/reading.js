@@ -199,6 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 chapterButton.textContent = chapterTitle;
                 chapterButton.addEventListener('click', () => {
                     loadChapter(chapterIndex);
+                    showMenuButtons()
                     closeMenu.click();
                 });
                 dropdownContent.appendChild(chapterButton);
@@ -237,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.text())
             .then(text => {
                 // Split text into chapters based on the chapter titles
-                chapters = text.split(/\n(?=第[\d零一二三四五六七八九百千点\.]+章)/).map(chapter => chapter.trim());
+                chapters = text.split(/\n(?=第[\d零一二三四五六七八九十百千点\.]+章)/).map(chapter => chapter.trim());
                 const savedChapterIndex = localStorage.getItem(`chapterIndex_${fileName}`);
                 if (savedChapterIndex) {
                     currentChapterIndex = parseInt(savedChapterIndex);
