@@ -11,7 +11,7 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 5px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,7 +103,7 @@ header {
 }
 
 .menu-open footer {
-    margin-left: 20%; 
+    display: block;
 }
 
 .menu ul {
@@ -269,7 +269,7 @@ input[type="range"] {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header {
-        margin-top: 0px;
+        margin: 5px;
     }
 
     .title-link h1 {
@@ -290,13 +290,7 @@ input[type="range"] {
     }
 
     footer {
-        position: static;
-        bottom: 0;
-        left: 0;
         width: 95%;
-        background-color: #333;
-        color: #fff;
-        text-align: center;
     }
 
     .nav-btn {
