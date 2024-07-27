@@ -11,7 +11,7 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 5px 20px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -269,7 +269,7 @@ input[type="range"] {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header {
-        margin: 5px;
+        margin-top: 0px;
     }
 
     .title-link h1 {
