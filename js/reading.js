@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const rangeButton = document.createElement('button');
             rangeButton.classList.add('dropdown');
-            rangeButton.textContent = `章节 ${rangeStart + 1} - ${rangeEnd}`;
+            rangeButton.textContent = `第${rangeStart + 1}-${rangeEnd}章`;
 
             const dropdownContent = document.createElement('div');
             dropdownContent.classList.add('dropdown-content');
