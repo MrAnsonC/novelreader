@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialTheme = savedTheme || 'white-black';
     const initialTextAlign = savedTextAlign || 'left';
     const initialTextStyle = savedTextStyle || 'normal';
-    const initialTextFamily = savedTextFamily || 'serif';
+    const initialTextFamily = savedTextFamily || 'sans-serif';
 
     // Apply saved settings
     updateFontSize(initialFontSize);
@@ -165,15 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'boldItalic':
                 contentDiv.style.fontStyle = 'italic';
                 contentDiv.style.fontWeight = 'bold';
-                break;
-            case 'sans-serif':
-                contentDiv.style.fontFamily = 'sans-serif';
-                break;
-            case 'monospace':
-                contentDiv.style.fontFamily = 'monospace';
-                break;
-            case 'serif':
-                contentDiv.style.fontFamily = 'serif';
                 break;
             default:
                 contentDiv.style.fontStyle = 'normal';
