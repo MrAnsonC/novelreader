@@ -176,28 +176,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function populateChapterList() {
-        chapterList.innerHTML = chapters.map((chapter, index) => {
-            const [title] = chapter.split('\n');
-            if (title.startsWith('第')) {
-                return `<button class="chapter-item" data-index="${index}">${title.trim()}</button>`;
+        chapterList.innerHTML = '';
+
+        const rangeSize = chapters.length <= 500 ? 50 : 200;
+        const totalRanges = Math.ceil(chapters.length / rangeSize);
+
+        for (let rangeIndex = 0; rangeIndex < totalRanges; rangeIndex++) {
+            const rangeStart = rangeIndex * rangeSize;
+            const rangeEnd = Math.min(rangeStart + rangeSize, chapters.length);
+            
+            const rangeButton = document.createElement('button');
+            rangeButton.classList.add('dropdown');
+            rangeButton.textContent = `章节 ${rangeStart + 1} - ${rangeEnd}`;
+
+            const dropdownContent = document.createElement('div');
+            dropdownContent.classList.add('dropdown-content');
+
+            for (let chapterIndex = rangeStart; chapterIndex < rangeEnd; chapterIndex++) {
+                const chapterTitle = chapters[chapterIndex].split('\n')[0].trim();
+                const chapterButton = document.createElement('button');
+                chapterButton.classList.add('chapter-item');
+                chapterButton.textContent = chapterTitle;
+                chapterButton.addEventListener('click', () => {
+                    loadChapter(chapterIndex);
+                    closeMenu.click();
+                });
+                dropdownContent.appendChild(chapterButton);
             }
-            else if (title.startsWith('**')) {
-                return `<button class="chapter-item special-chapter" disabled>${title.replace('**', '').trim()}</button>`;
-            }
-            return '';
-        }).join('');
-    
-        chapterList.querySelectorAll('.chapter-item').forEach(item => {
-            item.addEventListener('click', (e) => {
-                const index = parseInt(e.target.getAttribute('data-index'));
-                if (!isNaN(index)) {
-                    loadChapter(index);
-                    menu.classList.remove('open');
-                    document.body.classList.remove('menu-open');
-                }
+
+            rangeButton.addEventListener('click', () => {
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
             });
-        });
-    }    
+
+            chapterList.appendChild(rangeButton);
+            chapterList.appendChild(dropdownContent);
+        }
+    }
 
     function showChapterList() {
         isInChapterListView = true;

@@ -18,6 +18,40 @@ header {
     position: relative;
 }
 
+/* Add new styles for dropdowns and sections */
+.dropdown {
+    background-color: #555;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f4f4f4;
+    overflow: auto;
+    max-height: 200px; /* Adjust this value as needed */
+}
+
+.dropdown-content .chapter-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content .chapter-item:hover {
+    background-color: #8c00ff;
+}
+
+.dropdown-content .chapter-item:last-child {
+    border-bottom: none;
+}
+
+
 .title-link {
     color: #fff;
     text-decoration: none; 
