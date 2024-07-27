@@ -71,6 +71,32 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('textFamily', e.target.value);
     });
 
+    document.addEventListener('DOMContentLoaded', () => {
+        const loadingDiv = document.getElementById('loading');
+    
+        // Show loading GIF initially
+        loadingDiv.style.display = 'block';
+    
+        // Create a temporary element to trigger font loading
+        const testElement = document.createElement('span');
+        testElement.style.fontFamily = 'CustomFontName1'; // Replace with your custom font
+        testElement.style.visibility = 'hidden';
+        document.body.appendChild(testElement);
+    
+        // Check if the font has loaded
+        function checkFontLoaded() {
+            const fontLoaded = window.getComputedStyle(testElement).fontFamily.includes('CustomFontName1'); // Replace with your custom font
+            if (fontLoaded) {
+                loadingDiv.style.display = 'none';
+                document.body.removeChild(testElement);
+            } else {
+                requestAnimationFrame(checkFontLoaded); // Check again in the next frame
+            }
+        }
+    
+        checkFontLoaded();
+    });
+
     hamburger.addEventListener('click', () => {
         menu.classList.add('open');
         document.body.classList.add('menu-open');
