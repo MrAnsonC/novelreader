@@ -249,20 +249,25 @@ input[type="range"] {
     font-family: 'LongCang'; 
     src: url('fonts/LongCang.ttf') format('truetype');
 }
-
 @font-face {
     font-family: 'MaShanZheng'; 
     src: url('fonts/MaShanZheng.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'NotoSansSC'; 
-    src: url('fonts/NotoSansSC.ttf') format('truetype');
+    font-family: 'HYDiShengXiaRiTiU'; 
+    src: url('fonts/HYDiShengXiaRiTiU.ttf') format('truetype');
 }
+
 
 @font-face {
     font-family: 'NotoSerifSC'; 
     src: url('fonts/NotoSerifSC.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'XiangJiaoLvSenKaFeiLingGanTi'; 
+    src: url('fonts/XiangJiaoLvSenKaFeiLingGanTi.ttf') format('truetype');
 }
 
 @font-face {
