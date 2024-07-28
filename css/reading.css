@@ -241,13 +241,8 @@ input[type="range"] {
 
 /* Font */
 @font-face {
-    font-family: 'NotoSerifSC'; 
-    src: url('fonts/NotoSerifSC.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'MaShanZheng'; 
-    src: url('fonts/MaShanZheng.ttf') format('truetype');
+    font-family: 'LiuJianMaoCao'; 
+    src: url('fonts/LiuJianMaoCao.ttf') format('truetype');
 }
 
 @font-face {
@@ -256,8 +251,38 @@ input[type="range"] {
 }
 
 @font-face {
+    font-family: 'MaShanZheng'; 
+    src: url('fonts/MaShanZheng.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NotoSansSC'; 
+    src: url('fonts/NotoSansSC.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NotoSerifSC'; 
+    src: url('fonts/NotoSerifSC.ttf') format('truetype');
+}
+
+@font-face {
     font-family: 'ZCOOLKuaiLe'; 
     src: url('fonts/ZCOOLKuaiLe.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ZCOOLQingKeHuangYou'; 
+    src: url('fonts/ZCOOLQingKeHuangYou.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ZCOOLXiaoWei'; 
+    src: url('fonts/ZCOOLXiaoWei.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ZhiMangXing'; 
+    src: url('fonts/ZhiMangXing.ttf') format('truetype');
 }
 
 @font-face {
