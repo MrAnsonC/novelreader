@@ -11,12 +11,12 @@
     },
     {
         "name": "守水库？我守的是时间长河！",
-        "author": "摘星的狸猫 著",
+        "author": "摘星的狸猫",
         "platform": "起点",
         "state": "连载中",
         "source": {
-            "images": "data/images/守水库？我守的是时间长河！(摘星的狸猫 著).jpg",
-            "resources": "data/txt/连载中-守水库？我守的是时间长河！(摘星的狸猫 著).txt"
+            "images": "data/images/守水库？我守的是时间长河！(摘星的狸猫).jpg",
+            "resources": "data/txt/连载中-守水库？我守的是时间长河！(摘星的狸猫).txt"
         }
     },
     {
@@ -117,6 +117,16 @@
         "source": {
             "images": "data/images/我在精神病院学斩神(三九音域).jpg",
             "resources": "data/txt/已完结-我在精神病院学斩神(三九音域).txt"
+        }
+    },
+    {
+        "name": "都市：假扮丑女的同桌被我发现了！",
+        "author": "不神宁死",
+        "platform": "起点",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/都市：假扮丑女的同桌被我发现了(不神宁死).jpg",
+            "resources": "data/txt/已完结-都市：假扮丑女的同桌被我发现了(不神宁死).txt"
         }
     }
 ]
