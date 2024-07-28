@@ -158,6 +158,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 contentDiv.style.fontStyle = 'normal';
                 contentDiv.style.fontWeight = 'normal';
                 break;
+            case 'Italic':
+                contentDiv.style.fontStyle = 'italic';
+                contentDiv.style.fontWeight = 'normal';
+                break;
             case 'bold':
                 contentDiv.style.fontStyle = 'normal';
                 contentDiv.style.fontWeight = 'bold';
