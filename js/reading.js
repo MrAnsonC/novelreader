@@ -37,6 +37,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialTextStyle = savedTextStyle || 'normal';
     const initialTextFamily = savedTextFamily || 'sans-serif';
 
+    // Function to apply encoding
+    function applyEncoding() {
+        // Add dragstart event listener
+        contentDiv.addEventListener('dragstart', handleDragStart);
+
+        // Add copy event listener
+        document.addEventListener('copy', handleCopy);
+    }
+
+    // Drag start handler
+    function handleDragStart(event) {
+        const selectedText = window.getSelection().toString();
+        const encodedText = encodeTextRandomly(selectedText);
+        event.dataTransfer.setData('text/plain', encodedText);
+        event.preventDefault();
+    }
+
+    // Copy handler
+    function handleCopy(event) {
+        const selectedText = window.getSelection().toString();
+        const encodedText = encodeTextRandomly(selectedText);
+        event.clipboardData.setData('text/plain', encodedText);
+        event.preventDefault();
+    }
+
     // Apply saved settings
     updateFontSize(initialFontSize);
     updateTheme(initialTheme);
@@ -114,6 +139,75 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set menu styles
     menu.style.backgroundColor = '#333';
     menu.style.color = '#fff';
+
+    // Add dragstart event listener
+    contentDiv.addEventListener('dragstart', (event) => {
+        const selectedText = window.getSelection().toString();
+        const encodedText = encodeTextRandomly(selectedText);
+        event.dataTransfer.setData('text/plain', encodedText);
+        event.preventDefault();
+    });
+
+    // Prevent Copying and Transform Content to UTF-16
+    document.addEventListener('copy', (event) => {
+        const selection = document.getSelection();
+        const selectedText = selection.toString();
+
+        // Convert to random UTF-7, UTF-16, or UTF-32
+        const encodedText = encodeTextRandomly(selectedText);
+
+        event.clipboardData.setData('text/plain', encodedText);
+        event.preventDefault();
+    });
+
+    // Function to convert text to random UTF-7, UTF-16, or UTF-32 encoding
+    function encodeTextRandomly(text) {
+        return Array.from(text).map(char => {
+            const rand = Math.random();
+            if (rand < 1/100) {
+                // UTF-7
+                return `+${char.charCodeAt(0).toString(16)}-`;
+            } else if (rand < 2/100) {
+                // UTF-16
+                return `\\u${char.charCodeAt(0).toString(16).padStart(4, '0')}`;
+            } else if (rand < 3/100) {
+                // UTF-32
+                return `\\U${char.codePointAt(0).toString(16).padStart(8, '0')}`;
+            } else if (rand < 4/100) {
+                // ISO-8859-1
+                return `&#${char.charCodeAt(0)};`;
+            } else if (rand < 5/100){
+                // US-ASCII or Windows-1252
+                return `\\x${char.charCodeAt(0).toString(16).padStart(2, '0')}`;
+            } else{
+                return ``;
+            }
+        }).join('');
+    }
+
+    /// Print event listener
+    window.addEventListener('beforeprint', () => {
+        // Encode the content to random UTF-7, UTF-16, or UTF-32
+        const originalContent = contentDiv.innerHTML;
+        const encodedContent = encodeTextRandomly(contentDiv.textContent);
+
+        // Replace the content with the encoded version
+        contentDiv.textContent = encodedContent;
+
+        // Restore the original content after printing
+        window.addEventListener('afterprint', () => {
+            contentDiv.innerHTML = originalContent;
+        }, { once: true });
+    });
+
+    // Listen for F12 or developer tools
+    window.addEventListener('resize', () => {
+        if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
+            contentDiv.textContent = encodedContent;
+        } else {
+            contentDiv.innerHTML = originalContent;
+        }
+    });
 
     // Utility Functions
     function updateFontSize(size) {
@@ -281,6 +375,28 @@ document.addEventListener('DOMContentLoaded', () => {
         chapterListSidebar.style.display = 'block';
         chapterList.style.display = 'none';
     }
+
+    // Check if developer tools are open
+    function detectDevTools() {
+        const element = new Image();
+        Object.defineProperty(element, 'id', {
+            get: () => {
+                throw new Error('DevTools open');
+            }
+        });
+
+        try {
+            console.log(element);
+        } catch (e) {
+            applyEncoding(); // Reapply the encoding function if DevTools are detected
+        }
+    }
+
+    // Initial application of encoding
+    applyEncoding();
+
+    // Continuous check for developer tools
+    setInterval(detectDevTools, 1000);
 
     // Initialize Chapter Loading
     const fileName = new URLSearchParams(window.location.search).get('file');
