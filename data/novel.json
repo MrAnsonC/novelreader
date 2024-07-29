@@ -138,5 +138,15 @@
             "images": "data/images/柯南之名警察千叶(火耀世界).jpg",
             "resources": "data/txt/已完结-柯南之名警察千叶(火耀世界).txt"
         }
+    },
+    {
+        "name": "人在柯南，有脑内选项系统",
+        "author": "憧憬成为网文大佬",
+        "platform": "起点",
+        "state": "连载中",
+        "source": {
+            "images": "data/images/人在柯南，有脑内选项系统(憧憬成为网文大佬).jpg",
+            "resources": "data/txt/连载中-人在柯南，有脑内选项系统(憧憬成为网文大佬).txt"
+        }
     }
 ]
