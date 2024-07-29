@@ -189,13 +189,12 @@ main {
     }
 
     aside {
-        width: 100%;
-        transform: translateX(-100%);
+        width: 85%;
+        transform: translateX(-85%);
     }
 
     main {
         margin-left: 0;
-        padding: 10px;
     }
 
     #closeBtn {
@@ -257,4 +256,4 @@ main {
         padding: 10px;
         text-align: center;
     }
-}
+}   
