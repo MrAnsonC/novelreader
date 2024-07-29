@@ -190,7 +190,7 @@ main {
 
     aside {
         width: 85%;
-        transform: translateX(-85%);
+        transform: translateX(-100%);
     }
 
     main {
@@ -207,7 +207,6 @@ main {
     }
 
     .novel-card img {
-        width: 100%; /* Adjust image width to fit card */
         height: auto;
         border-radius: 5px;
         margin-right: 0;
