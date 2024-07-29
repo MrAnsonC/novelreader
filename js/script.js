@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function setupPagination(novels) {
         const totalPages = Math.ceil(novels.length / novelsPerPage);
         const rangeDropdown = document.getElementById('rangeDropdown');
+        const contentDiv = document.getElementById('headering'); 
         rangeDropdown.innerHTML = ''; // Clear previous options
 
         for (let i = 1; i <= totalPages; i++) {
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         rangeDropdown.addEventListener('change', () => {
             currentPage = parseInt(rangeDropdown.value);
             displayNovels(novels, currentPage);
+            contentDiv.scrollIntoView({ behavior: 'instant' });
         });
 
         document.getElementById('prevPage').addEventListener('click', () => {
@@ -34,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentPage--;
                 rangeDropdown.value = currentPage;
                 displayNovels(novels, currentPage);
+                contentDiv.scrollIntoView({ behavior: 'instant' });
             }
         });
 
@@ -43,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentPage++;
                 rangeDropdown.value = currentPage;
                 displayNovels(novels, currentPage);
+                contentDiv.scrollIntoView({ behavior: 'instant' });
             }
         });
     }
