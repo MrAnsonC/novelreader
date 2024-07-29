@@ -54,14 +54,14 @@ aside {
     cursor: pointer;
     margin-top: 5px;
     border-radius: 20px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; 
 }
 
 #filterResults:hover, #resetFilters:hover {
     background-color: #8c00ff;
 }
 
-#closeBtn {
+.close-btn {
     font-size: 24px;
     background: none;
     border: none;
@@ -70,6 +70,52 @@ aside {
     position: absolute;
     top: 20px;
     right: 20px;
+}
+
+aside h2 {
+    margin-top: 60px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#filterResults, #resetFilters {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 5px;
+    border-radius: 20px;
+}
+
+#closeBtn {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    border-radius: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#closeBtn:hover {
+    background-color: #d40000;
 }
 
 main {
