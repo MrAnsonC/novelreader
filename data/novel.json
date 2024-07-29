@@ -158,5 +158,35 @@
             "images": "data/images/亲爱的，该吃药了！(小小小小小小飞著).jpg",
             "resources": "data/txt/已完结-亲爱的，该吃药了！(小小小小小小飞著).txt"
         }
+    },
+    {
+        "name": "在柯学世界上高中",
+        "author": "余溯",
+        "platform": "起点",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/在柯学世界上高中(余溯).jpg",
+            "resources": "data/txt/已完结-在柯学世界上高中(余溯).txt"
+        }
+    },
+    {
+        "name": "柯学验尸官",
+        "author": "河流之汪",
+        "platform": "起点",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/柯学验尸官(河流之汪).jpg",
+            "resources": "data/txt/已完结-柯学验尸官(河流之汪).txt"
+        }
+    },
+    {
+        "name": "重生柯南当侦探",
+        "author": "猫色",
+        "platform": "起点",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/重生柯南当侦探(猫色).jpg",
+            "resources": "data/txt/已完结-重生柯南当侦探(猫色).txt"
+        }
     }
 ]
