@@ -228,5 +228,15 @@
             "images": "data/images/柯南之总有人想谋害我(呆萌懒鱼).jpg",
             "resources": "data/txt/已完结-柯南之总有人想谋害我(呆萌懒鱼).txt"
         }
+    },
+    {
+        "name": "柯南之我真不是内鬼",
+        "author": "柯学的菜头",
+        "platform": "起点",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/柯南之我真不是内鬼(柯学的菜头).jpg",
+            "resources": "data/txt/已完结-柯南之我真不是内鬼(柯学的菜头).txt"
+        }
     }
 ]
