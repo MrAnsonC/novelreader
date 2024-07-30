@@ -120,6 +120,16 @@
         }
     },
     {
+        "name": "我的右眼是神级计算机",
+        "author": "王自律",
+        "platform": "番茄",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/我的右眼是神级计算机(王自律).jpg",
+            "resources": "data/txt/已完结-我的右眼是神级计算机(王自律).txt"
+        }
+    },
+    {
         "name": "兔子必须死",
         "author": "一梦黄粱",
         "platform": "起点",
