@@ -188,5 +188,15 @@
             "images": "data/images/重生柯南当侦探(猫色).jpg",
             "resources": "data/txt/已完结-重生柯南当侦探(猫色).txt"
         }
+    },
+    {
+        "name": "柯南之机械师",
+        "author": "松平修身",
+        "platform": "起点",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/柯南之机械师(松平修身).jpg",
+            "resources": "data/txt/已完结-柯南之机械师(松平修身).txt"
+        }
     }
 ]
