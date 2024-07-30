@@ -248,5 +248,15 @@
             "images": "data/images/柯南之我真不是酒厂大佬(偶系缝合怪).jpg",
             "resources": "data/txt/已完结-柯南之我真不是酒厂大佬(偶系缝合怪).txt"
         }
+    },
+    {
+        "name": "从柯南世界开始的打工者物语",
+        "author": "懒杨",
+        "platform": "百度小说",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/从柯南世界开始的打工者物语(懒杨).jpg",
+            "resources": "data/txt/已完结-从柯南世界开始的打工者物语(懒杨).txt"
+        }
     }
 ]
