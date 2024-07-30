@@ -218,5 +218,15 @@
             "images": "data/images/我！黑衣组织大佬(不是塔酱).jpg",
             "resources": "data/txt/已完结-我！黑衣组织大佬(不是塔酱).txt"
         }
+    },
+    {
+        "name": "柯南之总有人想谋害我",
+        "author": "呆萌懒鱼",
+        "platform": "起点",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/柯南之总有人想谋害我(呆萌懒鱼).jpg",
+            "resources": "data/txt/已完结-柯南之总有人想谋害我(呆萌懒鱼).txt"
+        }
     }
 ]
