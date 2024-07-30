@@ -198,5 +198,15 @@
             "images": "data/images/柯南之机械师(松平修身).jpg",
             "resources": "data/txt/已完结-柯南之机械师(松平修身).txt"
         }
+    },
+    {
+        "name": "名侦探柯南之混吃等死",
+        "author": "松平海伦因修身",
+        "platform": "",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/名侦探柯南之混吃等死(海伦因).jpg",
+            "resources": "data/txt/已完结-名侦探柯南之混吃等死(海伦因).txt"
+        }
     }
 ]
