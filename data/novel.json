@@ -208,5 +208,15 @@
             "images": "data/images/名侦探柯南之混吃等死(海伦因).jpg",
             "resources": "data/txt/已完结-名侦探柯南之混吃等死(海伦因).txt"
         }
+    },
+    {
+        "name": "我！黑衣组织大佬",
+        "author": "不是塔酱",
+        "platform": "刺猬猫(不肯定)",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/我！黑衣组织大佬(不是塔酱).jpg",
+            "resources": "data/txt/已完结-我！黑衣组织大佬(不是塔酱).txt"
+        }
     }
 ]
