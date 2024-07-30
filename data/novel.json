@@ -278,5 +278,15 @@
             "images": "data/images/名侦探之变态科学家(只喝农药).jpg",
             "resources": "data/txt/已完结-名侦探之变态科学家(只喝农药).txt"
         }
+    },
+    {
+        "name": "我在名侦探世界打酱油",
+        "author": "武辰佑",
+        "platform": "起点",
+        "state": "已完结",
+        "source": {
+            "images": "data/images/我在名侦探世界打酱油(武辰佑).jpg",
+            "resources": "data/txt/已完结-我在名侦探世界打酱油(武辰佑).txt"
+        }
     }
 ]
