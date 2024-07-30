@@ -59,8 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
         let filteredNovels = novels.filter(novel => {
             const matchesSearch = novel.name.toLowerCase().includes(searchValue) || searchValue === "";
-            const matchesPlatform = platformValue === "all" || (platformValue === "其他"
-                ? !["番茄", "飞卢小说", "起点", "QQ阅读"].includes(novel.platform) : novel.platform === platformValue);
+            const matchesPlatform = platformValue === "all" || 
+                (platformValue === "起点/QQ阅读" ? (novel.platform === "起点" || novel.platform === "QQ阅读") : novel.platform === platformValue) ||
+                (platformValue === "其他" ? !["番茄", "飞卢小说", "起点", "QQ阅读"].includes(novel.platform)
+                     : novel.platform === platformValue);
             const matchesState = stateValue === "all" ||
                 (stateValue === "断更/被封杀" ? (novel.state === "断更" || novel.state === "被封杀") : novel.state === stateValue) ||
                 (stateValue === "其他" ? !["已完结", "连载中", "断更", "被封杀"].includes(novel.state) 
@@ -127,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = document.createElement('div');
             card.classList.add('novel-card');
     
-            const image = novel.source.images || 'data/images/未知.jpg';
+            const image = novel.source.images || 'data/images/unknown.jpg';
             const name = novel.name || '未知';
             const author = novel.author || '未知';
             const platform = novel.platform || '未知';
