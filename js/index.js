@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     let novels = [];
     let currentPage = 1;
-    let currentLanguage = 'zh_chs'; // Default language
     const novelsPerPage = 10;
     let translations = {}; // Initialize translations
+
+    // Load the saved language or set default language
+    let currentLanguage = localStorage.getItem('selectedLanguage') || 'zh_chs';
 
     // Fetch both novel data and translations together
     Promise.all([
@@ -23,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('languageSelector').addEventListener('change', (event) => {
         currentLanguage = event.target.value;
+        localStorage.setItem('selectedLanguage', currentLanguage);
         applyTranslations(currentLanguage);
         setupPagination(novels); // Re-setup pagination with new translations
         displayNovels(novels, currentPage); // Refresh novel display with new language
