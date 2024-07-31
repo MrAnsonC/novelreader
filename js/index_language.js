@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load the saved language or set default language
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'zh_chs';
+    document.getElementById('languageSelector').value = currentLanguage;
 
     // Fetch both novel data and translations together
     Promise.all([
