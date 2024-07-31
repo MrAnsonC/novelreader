@@ -185,6 +185,7 @@ footer {
     padding: 10px;
     text-align: center;
     display: block;
+    width: auto;
 }
 
 .nav-btn {
@@ -320,7 +321,7 @@ input[type="range"] {
     }
 
     footer {
-        width: 95%;
+        width: auto;
     }
 
     .nav-btn {

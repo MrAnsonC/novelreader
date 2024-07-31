@@ -304,7 +304,7 @@ footer {
         position: static;
         bottom: 0;
         left: 0;
-        width: 100%;
+        width: auto;
         background-color: #333;
         color: #fff;
         padding: 10px;
