@@ -3,7 +3,7 @@
         "name": "柯南：从未来归来的工藤柯南",
         "author": "夜月先生",
         "platform": "起点",
-        "state": "连载中",
+        "status": "连载中",
         "source": {
             "images": "data/images/从未来归来的工藤柯南(夜月先生).jpg",
             "resources": "data/txt/连载中/从未来归来的工藤柯南(夜月先生).txt"
@@ -13,7 +13,7 @@
         "name": "守水库？我守的是时间长河！",
         "author": "摘星的狸猫",
         "platform": "起点",
-        "state": "连载中",
+        "status": "连载中",
         "source": {
             "images": "data/images/守水库？我守的是时间长河！(摘星的狸猫).jpg",
             "resources": "data/txt/连载中/守水库？我守的是时间长河！(摘星的狸猫).txt"
@@ -23,7 +23,7 @@
         "name": "约会大作战",
         "author": "橘公司",
         "platform": "日本富士见书房",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/约会大作战(橘公司).jpg",
             "resources": "data/txt/已完结/约会大作战(橘公司).txt"
@@ -33,7 +33,7 @@
         "name": "此刻,全球进入恐怖时代",
         "author": "黑白茶",
         "platform": "飞卢小说",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/此刻,全球进入恐怖时代(黑白茶).jpg",
             "resources": "data/txt/已完结/此刻,全球进入恐怖时代(黑白茶).txt"
@@ -43,7 +43,7 @@
         "name": "变成吸血姬后被校花给拐回家了",
         "author": "浮世一生繁华1",
         "platform": "番茄",
-        "state": "被封杀",
+        "status": "被封杀",
         "source": {
             "images": "data/images/变成吸血姬后被校花给拐回家了(浮世一生繁华1).jpg",
             "resources": "data/txt/被封杀/变成吸血姬后被校花给拐回家了(浮世一生繁华1).txt"
@@ -53,7 +53,7 @@
         "name": "天命出马仙",
         "author": "吴半仙",
         "platform": "番茄",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/天命出马仙(吴半仙).jpg",
             "resources": "data/txt/已完结/天命出马仙(吴半仙).txt"
@@ -63,7 +63,7 @@
         "name": "全球通缉：开局五星级越狱",
         "author": "云中暮雪",
         "platform": "番茄",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/全球通缉：开局五星级越狱(云中暮雪).jpg",
             "resources": "data/txt/已完结/全球通缉：开局五星级越狱(云中暮雪).txt"
@@ -73,7 +73,7 @@
         "name": "全球捉迷藏：开局获得作弊模式！",
         "author": "娱乐天王",
         "platform": "番茄",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/全球捉迷藏：开局获得作弊模式！（娱乐天王）.jpg",
             "resources": "data/txt/已完结/全球捉迷藏：开局获得作弊模式！（娱乐天王）.txt"
@@ -83,7 +83,7 @@
         "name": "身为男生志愿填魔女学院很奇怪！",
         "author": "杨月涵",
         "platform": "菠蘿包輕小説",
-        "state": "连载中",
+        "status": "连载中",
         "source": {
             "images": "data/images/身为男生志愿填魔女学院很奇怪(杨月涵).jpg",
             "resources": "data/txt/连载中/身为男生志愿填魔女学院很奇怪(杨月涵).txt"
@@ -93,7 +93,7 @@
         "name": "柯南之薄荷味白鲸",
         "author": "白鲸薄荷糖",
         "platform": "起点",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/柯南之薄荷味白鲸(白鲸薄荷糖).jpg",
             "resources": "data/txt/已完结/柯南之薄荷味白鲸(白鲸薄荷糖).txt"
@@ -103,7 +103,7 @@
         "name": "驭龙师最弱职业？我契约清冷校花",
         "author": "白骨青灰",
         "platform": "番茄",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/驭龙师最弱职业？我契约清冷校花(白骨青灰).jpg",
             "resources": "data/txt/已完结/驭龙师最弱职业？我契约清冷校花(白骨青灰).txt"
@@ -113,7 +113,7 @@
         "name": "我在精神病院学斩神",
         "author": "三九音域",
         "platform": "番茄",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/我在精神病院学斩神(三九音域).jpg",
             "resources": "data/txt/已完结/我在精神病院学斩神(三九音域).txt"
@@ -123,7 +123,7 @@
         "name": "我的右眼是神级计算机",
         "author": "王自律",
         "platform": "番茄",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/我的右眼是神级计算机(王自律).jpg",
             "resources": "data/txt/已完结/我的右眼是神级计算机(王自律).txt"
@@ -133,7 +133,7 @@
         "name": "兔子必须死",
         "author": "一梦黄粱",
         "platform": "起点",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/兔子必须死(一梦黄粱).jpg",
             "resources": "data/txt/已完结/兔子必须死(一梦黄粱).txt"
@@ -143,7 +143,7 @@
         "name": "柯南之名警察千叶",
         "author": "火耀世界",
         "platform": "书旗",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/柯南之名警察千叶(火耀世界).jpg",
             "resources": "data/txt/已完结/柯南之名警察千叶(火耀世界).txt"
@@ -153,7 +153,7 @@
         "name": "人在柯南，有脑内选项系统",
         "author": "憧憬成为网文大佬",
         "platform": "起点",
-        "state": "连载中",
+        "status": "连载中",
         "source": {
             "images": "data/images/人在柯南，有脑内选项系统(憧憬成为网文大佬).jpg",
             "resources": "data/txt/连载中/人在柯南，有脑内选项系统(憧憬成为网文大佬).txt"
@@ -163,7 +163,7 @@
         "name": "亲爱的，该吃药了！",
         "author": "小小小小小小飞著",
         "platform": "起点",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/亲爱的，该吃药了！(小小小小小小飞著).jpg",
             "resources": "data/txt/已完结/亲爱的，该吃药了！(小小小小小小飞著).txt"
@@ -173,7 +173,7 @@
         "name": "在柯学世界上高中",
         "author": "余溯",
         "platform": "起点",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/在柯学世界上高中(余溯).jpg",
             "resources": "data/txt/已完结/在柯学世界上高中(余溯).txt"
@@ -183,7 +183,7 @@
         "name": "柯学验尸官",
         "author": "河流之汪",
         "platform": "起点",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/柯学验尸官(河流之汪).jpg",
             "resources": "data/txt/已完结/柯学验尸官(河流之汪).txt"
@@ -193,7 +193,7 @@
         "name": "重生柯南当侦探",
         "author": "猫色",
         "platform": "起点",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/重生柯南当侦探(猫色).jpg",
             "resources": "data/txt/已完结/重生柯南当侦探(猫色).txt"
@@ -203,7 +203,7 @@
         "name": "柯南之机械师",
         "author": "松平修身",
         "platform": "起点",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/柯南之机械师(松平修身).jpg",
             "resources": "data/txt/已完结/柯南之机械师(松平修身).txt"
@@ -213,7 +213,7 @@
         "name": "名侦探柯南之混吃等死",
         "author": "松平海伦因修身",
         "platform": "",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/名侦探柯南之混吃等死(海伦因).jpg",
             "resources": "data/txt/已完结/名侦探柯南之混吃等死(海伦因).txt"
@@ -223,7 +223,7 @@
         "name": "我！黑衣组织大佬",
         "author": "不是塔酱",
         "platform": "刺猬猫(不肯定)",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/我！黑衣组织大佬(不是塔酱).jpg",
             "resources": "data/txt/已完结/我！黑衣组织大佬(不是塔酱).txt"
@@ -233,7 +233,7 @@
         "name": "柯南之总有人想谋害我",
         "author": "呆萌懒鱼",
         "platform": "起点",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/柯南之总有人想谋害我(呆萌懒鱼).jpg",
             "resources": "data/txt/已完结/柯南之总有人想谋害我(呆萌懒鱼).txt"
@@ -243,7 +243,7 @@
         "name": "柯南之我真不是内鬼",
         "author": "柯学的菜头",
         "platform": "起点",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/柯南之我真不是内鬼(柯学的菜头).jpg",
             "resources": "data/txt/已完结/柯南之我真不是内鬼(柯学的菜头).txt"
@@ -253,7 +253,7 @@
         "name": "柯南之我真不是酒厂大佬",
         "author": "偶系缝合怪",
         "platform": "起点",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/柯南之我真不是酒厂大佬(偶系缝合怪).jpg",
             "resources": "data/txt/已完结/柯南之我真不是酒厂大佬(偶系缝合怪).txt"
@@ -263,7 +263,7 @@
         "name": "从柯南世界开始的打工者物语",
         "author": "懒杨",
         "platform": "百度小说",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/从柯南世界开始的打工者物语(懒杨).jpg",
             "resources": "data/txt/已完结/从柯南世界开始的打工者物语(懒杨).txt"
@@ -273,7 +273,7 @@
         "name": "名侦探之变态科学家",
         "author": "只喝农药",
         "platform": "起点",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/名侦探之变态科学家(只喝农药).jpg",
             "resources": "data/txt/已完结/名侦探之变态科学家(只喝农药).txt"
@@ -283,7 +283,7 @@
         "name": "我在名侦探世界打酱油",
         "author": "武辰佑",
         "platform": "起点",
-        "state": "已完结",
+        "status": "已完结",
         "source": {
             "images": "data/images/我在名侦探世界打酱油(武辰佑).jpg",
             "resources": "data/txt/已完结/我在名侦探世界打酱油(武辰佑).txt"

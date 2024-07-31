@@ -14,7 +14,7 @@
         "feilu": "飞卢小说",
         "qq_reading": "起点/QQ阅读",
         "other": "其他",
-        "state": "状态",
+        "status": "状态",
         "completed": "已完结",
         "ongoing": "连载中",
         "discontinued": "断更/被封杀",
@@ -23,7 +23,13 @@
         "languageSelector": "网页语言",
         "previous_page": "上一页",
         "next_page": "下一页",
-        "created_by": "由HSC制造"
+        "created_by": "由HSC制造",
+        "page": "页",
+        "author": "作者",
+        "word_count": "字数",
+        "calculating": "计算中...",
+        "loading_error": "加载错误",
+        "data_missing": "数据缺失"
     },
     "zh_cht": {
         "site_title": "超級陳大爺小說網",
@@ -40,7 +46,7 @@
         "feilu": "飛盧小說",
         "qq_reading": "起點/QQ閱讀",
         "other": "其他",
-        "state": "狀態",
+        "status": "狀態",
         "completed": "已完結",
         "ongoing": "連載中",
         "discontinued": "斷更/被封殺",
@@ -49,6 +55,12 @@
         "languageSelector": "網頁語言",
         "previous_page": "上一頁",
         "next_page": "下一頁",
-        "created_by": "由HSC製造"
+        "created_by": "由HSC製造",
+        "page": "頁",
+        "author": "作者",
+        "word_count": "字數",
+        "calculating": "計算中...",
+        "loading_error": "加載錯誤",
+        "data_missing": "數據缺失"
     }
 }
