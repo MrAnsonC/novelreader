@@ -12,6 +12,48 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error loading novel data:', error));
 
+        fetch('data/language/index.json')
+        .then(response => response.json())
+        .then(data => {
+            translations = data;
+            applyTranslations('zh_chs');
+        })
+        .catch(error => console.error('Error loading translations:', error));
+
+    document.getElementById('languageSelector').addEventListener('change', (event) => {
+        applyTranslations(event.target.value);
+    });
+
+    function applyTranslations(language) {
+        document.getElementById('site_title').textContent = translations[language].site_title;
+        document.getElementById('site_title_text').textContent = translations[language].site_title;
+        document.getElementById('search_novels').textContent = translations[language].search_novels;
+        document.getElementById('closeBtn').textContent = translations[language].close;
+        document.getElementById('search_label').textContent = translations[language].search;
+        document.getElementById('search').placeholder = translations[language].enter_novel_name;
+        document.getElementById('sort_label').textContent = translations[language].sort;
+        document.getElementById('sort').options[0].textContent = translations[language].word_high_to_low;
+        document.getElementById('sort').options[1].textContent = translations[language].word_low_to_high;
+        document.getElementById('platform_label').textContent = translations[language].platform;
+        document.getElementById('platform').options[0].textContent = translations[language].all;
+        document.getElementById('platform').options[1].textContent = translations[language].tomato;
+        document.getElementById('platform').options[2].textContent = translations[language].feilu;
+        document.getElementById('platform').options[3].textContent = translations[language].qq_reading;
+        document.getElementById('platform').options[4].textContent = translations[language].other;
+        document.getElementById('state_label').textContent = translations[language].state;
+        document.getElementById('state').options[0].textContent = translations[language].all;
+        document.getElementById('state').options[1].textContent = translations[language].completed;
+        document.getElementById('state').options[2].textContent = translations[language].ongoing;
+        document.getElementById('state').options[3].textContent = translations[language].discontinued;
+        document.getElementById('state').options[4].textContent = translations[language].other;
+        document.getElementById('filterResults').textContent = translations[language].find_novels;
+        document.getElementById('resetFilters').textContent = translations[language].reset;
+        document.getElementById('prevPage').textContent = translations[language].previous_page;
+        document.getElementById('nextPage').textContent = translations[language].next_page;
+        document.getElementById('created_by').textContent = translations[language].created_by;
+        document.getElementById('language_Selector').textContent = translations[language].languageSelector;
+    }
+
     function setupPagination(novels) {
         const totalPages = Math.ceil(novels.length / novelsPerPage);
         const rangeDropdown = document.getElementById('rangeDropdown');

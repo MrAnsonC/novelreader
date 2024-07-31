@@ -1,57 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh_chs">
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="css/icon.jpg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>超级陈大爷小说网</title>
+    <title id="site_title">超级陈大爷小说网</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <header id = "headering">
+    <header id="headering">
         <button id="hamburger" class="hamburger">&#9776;</button>
-        <h1>超级陈大爷小说网</h1>
+        <h1 id="site_title_text">超级陈大爷小说网</h1>
     </header>
 
     <aside id="filter">
         <button id="closeBtn" class="close-btn">关闭</button>
-        <div id="filter">
-            <h2>寻找小说</h2>
+        <div>
+            <h2 id="search_novels">寻找小说</h2>
             <div class="form-group">
-                <label for="search">Search</label>
+                <label for="search" id="search_label">搜索</label>
                 <input type="text" id="search" placeholder="输入小说名称">
             </div>
             <div class="form-group">
-                <label for="sort">次序</label>
+                <label for="sort" id="sort_label">次序</label>
                 <select id="sort">
                     <option value="word_high_to_low">字数最多优先</option>
                     <option value="word_low_to_high">字数最少优先</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="platform">平台</label>
+                <label for="platform" id="platform_label">平台</label>
                 <select id="platform">
                     <option value="all">所有</option>
-                    <option value="番茄">番茄</option>
-                    <option value="飞卢小说">飞卢小说</option>
-                    <option value="起点/QQ阅读">起点/QQ阅读</option>
-                    <option value="其他">其他</option>
+                    <option value="tomato">番茄</option>
+                    <option value="feilu">飞卢小说</option>
+                    <option value="qq_reading">起点/QQ阅读</option>
+                    <option value="other">其他</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="state">状态</label>
+                <label for="state" id="state_label">状态</label>
                 <select id="state">
                     <option value="all">所有</option>
-                    <option value="已完结">已完结</option>
-                    <option value="连载中">连载中</option>
-                    <option value="断更/被封杀">断更/被封杀</option>
-                    <option value="其他">其他</option>
+                    <option value="completed">已完结</option>
+                    <option value="ongoing">连载中</option>
+                    <option value="discontinued">断更/被封杀</option>
+                    <option value="other">其他</option>
                 </select>
             </div>
             <button id="filterResults">寻找小说</button>
             <button id="resetFilters">重置</button>
+
+            <div class="form-group">
+                <label for="languageSelector" id="language_Selector">网页语言</label>
+                <select id="languageSelector">
+                    <option value="zh_chs">简体中文</option>
+                <option value="zh_cht">繁體中文</option>
+                </select>
+            </div>
         </div>
     </aside>
 
@@ -61,14 +67,13 @@
             <button id="prevPage" class="pagination-button">上一页</button>
             <select id="rangeDropdown" class="pagination-dropdown"></select>
             <button id="nextPage" class="pagination-button">下一页</button>
-        </div>        
+        </div>
     </main>
 
     <footer>
-        <p>由HSC制造</p>
+        <p id="created_by">由HSC制造</p>
     </footer>
 
     <script src="js/script.js"></script>
 </body>
-
 </html>
