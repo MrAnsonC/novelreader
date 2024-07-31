@@ -174,9 +174,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
     
             card.addEventListener('click', () => {
-                const filePath = novel.source.resources.split('/').pop();
-                if (filePath) {
-                    window.location.href = `reading.html?file=${encodeURIComponent(filePath)}`;
+                const pathParts = novel.source.resources.split('/');
+                let relevantPath = pathParts.slice(-1).join('/');
+
+                const keywords = ['已完结', '连载中', '被封杀', '断更'];
+
+                if (keywords.some(keyword => novel.source.resources.includes(keyword))) {
+                    relevantPath = pathParts.slice(-2).join('/');
+                }
+
+                if (relevantPath) {
+                    window.location.href = `reading.html?file=${encodeURIComponent(relevantPath)}`;
                 } else {
                     console.error('File path is undefined.');
                 }

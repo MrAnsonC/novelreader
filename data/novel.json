@@ -6,7 +6,7 @@
         "state": "连载中",
         "source": {
             "images": "data/images/从未来归来的工藤柯南(夜月先生).jpg",
-            "resources": "data/txt/连载中-从未来归来的工藤柯南(夜月先生).txt"
+            "resources": "data/txt/连载中/从未来归来的工藤柯南(夜月先生).txt"
         }
     },
     {
@@ -16,7 +16,7 @@
         "state": "连载中",
         "source": {
             "images": "data/images/守水库？我守的是时间长河！(摘星的狸猫).jpg",
-            "resources": "data/txt/连载中-守水库？我守的是时间长河！(摘星的狸猫).txt"
+            "resources": "data/txt/连载中/守水库？我守的是时间长河！(摘星的狸猫).txt"
         }
     },
     {
@@ -26,7 +26,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/约会大作战(橘公司).jpg",
-            "resources": "data/txt/已完结-约会大作战(橘公司).txt"
+            "resources": "data/txt/已完结/约会大作战(橘公司).txt"
         }
     },
     {
@@ -36,7 +36,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/此刻,全球进入恐怖时代(黑白茶).jpg",
-            "resources": "data/txt/已完结-此刻,全球进入恐怖时代(黑白茶).txt"
+            "resources": "data/txt/已完结/此刻,全球进入恐怖时代(黑白茶).txt"
         }
     },
     {
@@ -46,7 +46,7 @@
         "state": "被封杀",
         "source": {
             "images": "data/images/变成吸血姬后被校花给拐回家了(浮世一生繁华1).jpg",
-            "resources": "data/txt/被封杀-变成吸血姬后被校花给拐回家了(浮世一生繁华1).txt"
+            "resources": "data/txt/被封杀/变成吸血姬后被校花给拐回家了(浮世一生繁华1).txt"
         }
     },
     {
@@ -56,7 +56,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/天命出马仙(吴半仙).jpg",
-            "resources": "data/txt/已完结-天命出马仙(吴半仙).txt"
+            "resources": "data/txt/已完结/天命出马仙(吴半仙).txt"
         }
     },
     {
@@ -66,7 +66,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/全球通缉：开局五星级越狱(云中暮雪).jpg",
-            "resources": "data/txt/已完结-全球通缉：开局五星级越狱(云中暮雪).txt"
+            "resources": "data/txt/已完结/全球通缉：开局五星级越狱(云中暮雪).txt"
         }
     },
     {
@@ -76,7 +76,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/全球捉迷藏：开局获得作弊模式！（娱乐天王）.jpg",
-            "resources": "data/txt/已完结-全球捉迷藏：开局获得作弊模式！（娱乐天王）.txt"
+            "resources": "data/txt/已完结/全球捉迷藏：开局获得作弊模式！（娱乐天王）.txt"
         }
     },
     {
@@ -86,7 +86,7 @@
         "state": "连载中",
         "source": {
             "images": "data/images/身为男生志愿填魔女学院很奇怪(杨月涵).jpg",
-            "resources": "data/txt/连载中-身为男生志愿填魔女学院很奇怪(杨月涵).txt"
+            "resources": "data/txt/连载中/身为男生志愿填魔女学院很奇怪(杨月涵).txt"
         }
     },
     {
@@ -96,7 +96,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/柯南之薄荷味白鲸(白鲸薄荷糖).jpg",
-            "resources": "data/txt/已完结-柯南之薄荷味白鲸(白鲸薄荷糖).txt"
+            "resources": "data/txt/已完结/柯南之薄荷味白鲸(白鲸薄荷糖).txt"
         }
     },
     {
@@ -106,7 +106,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/驭龙师最弱职业？我契约清冷校花(白骨青灰).jpg",
-            "resources": "data/txt/已完结-驭龙师最弱职业？我契约清冷校花(白骨青灰).txt"
+            "resources": "data/txt/已完结/驭龙师最弱职业？我契约清冷校花(白骨青灰).txt"
         }
     },
     {
@@ -116,7 +116,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/我在精神病院学斩神(三九音域).jpg",
-            "resources": "data/txt/已完结-我在精神病院学斩神(三九音域).txt"
+            "resources": "data/txt/已完结/我在精神病院学斩神(三九音域).txt"
         }
     },
     {
@@ -126,7 +126,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/我的右眼是神级计算机(王自律).jpg",
-            "resources": "data/txt/已完结-我的右眼是神级计算机(王自律).txt"
+            "resources": "data/txt/已完结/我的右眼是神级计算机(王自律).txt"
         }
     },
     {
@@ -136,7 +136,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/兔子必须死(一梦黄粱).jpg",
-            "resources": "data/txt/已完结-兔子必须死(一梦黄粱).txt"
+            "resources": "data/txt/已完结/兔子必须死(一梦黄粱).txt"
         }
     },
     {
@@ -146,7 +146,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/柯南之名警察千叶(火耀世界).jpg",
-            "resources": "data/txt/已完结-柯南之名警察千叶(火耀世界).txt"
+            "resources": "data/txt/已完结/柯南之名警察千叶(火耀世界).txt"
         }
     },
     {
@@ -156,7 +156,7 @@
         "state": "连载中",
         "source": {
             "images": "data/images/人在柯南，有脑内选项系统(憧憬成为网文大佬).jpg",
-            "resources": "data/txt/连载中-人在柯南，有脑内选项系统(憧憬成为网文大佬).txt"
+            "resources": "data/txt/连载中/人在柯南，有脑内选项系统(憧憬成为网文大佬).txt"
         }
     },
     {
@@ -166,7 +166,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/亲爱的，该吃药了！(小小小小小小飞著).jpg",
-            "resources": "data/txt/已完结-亲爱的，该吃药了！(小小小小小小飞著).txt"
+            "resources": "data/txt/已完结/亲爱的，该吃药了！(小小小小小小飞著).txt"
         }
     },
     {
@@ -176,7 +176,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/在柯学世界上高中(余溯).jpg",
-            "resources": "data/txt/已完结-在柯学世界上高中(余溯).txt"
+            "resources": "data/txt/已完结/在柯学世界上高中(余溯).txt"
         }
     },
     {
@@ -186,7 +186,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/柯学验尸官(河流之汪).jpg",
-            "resources": "data/txt/已完结-柯学验尸官(河流之汪).txt"
+            "resources": "data/txt/已完结/柯学验尸官(河流之汪).txt"
         }
     },
     {
@@ -196,7 +196,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/重生柯南当侦探(猫色).jpg",
-            "resources": "data/txt/已完结-重生柯南当侦探(猫色).txt"
+            "resources": "data/txt/已完结/重生柯南当侦探(猫色).txt"
         }
     },
     {
@@ -206,7 +206,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/柯南之机械师(松平修身).jpg",
-            "resources": "data/txt/已完结-柯南之机械师(松平修身).txt"
+            "resources": "data/txt/已完结/柯南之机械师(松平修身).txt"
         }
     },
     {
@@ -216,7 +216,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/名侦探柯南之混吃等死(海伦因).jpg",
-            "resources": "data/txt/已完结-名侦探柯南之混吃等死(海伦因).txt"
+            "resources": "data/txt/已完结/名侦探柯南之混吃等死(海伦因).txt"
         }
     },
     {
@@ -226,7 +226,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/我！黑衣组织大佬(不是塔酱).jpg",
-            "resources": "data/txt/已完结-我！黑衣组织大佬(不是塔酱).txt"
+            "resources": "data/txt/已完结/我！黑衣组织大佬(不是塔酱).txt"
         }
     },
     {
@@ -236,7 +236,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/柯南之总有人想谋害我(呆萌懒鱼).jpg",
-            "resources": "data/txt/已完结-柯南之总有人想谋害我(呆萌懒鱼).txt"
+            "resources": "data/txt/已完结/柯南之总有人想谋害我(呆萌懒鱼).txt"
         }
     },
     {
@@ -246,7 +246,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/柯南之我真不是内鬼(柯学的菜头).jpg",
-            "resources": "data/txt/已完结-柯南之我真不是内鬼(柯学的菜头).txt"
+            "resources": "data/txt/已完结/柯南之我真不是内鬼(柯学的菜头).txt"
         }
     },
     {
@@ -256,7 +256,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/柯南之我真不是酒厂大佬(偶系缝合怪).jpg",
-            "resources": "data/txt/已完结-柯南之我真不是酒厂大佬(偶系缝合怪).txt"
+            "resources": "data/txt/已完结/柯南之我真不是酒厂大佬(偶系缝合怪).txt"
         }
     },
     {
@@ -266,7 +266,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/从柯南世界开始的打工者物语(懒杨).jpg",
-            "resources": "data/txt/已完结-从柯南世界开始的打工者物语(懒杨).txt"
+            "resources": "data/txt/已完结/从柯南世界开始的打工者物语(懒杨).txt"
         }
     },
     {
@@ -276,7 +276,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/名侦探之变态科学家(只喝农药).jpg",
-            "resources": "data/txt/已完结-名侦探之变态科学家(只喝农药).txt"
+            "resources": "data/txt/已完结/名侦探之变态科学家(只喝农药).txt"
         }
     },
     {
@@ -286,7 +286,7 @@
         "state": "已完结",
         "source": {
             "images": "data/images/我在名侦探世界打酱油(武辰佑).jpg",
-            "resources": "data/txt/已完结-我在名侦探世界打酱油(武辰佑).txt"
+            "resources": "data/txt/已完结/我在名侦探世界打酱油(武辰佑).txt"
         }
     }
 ]
