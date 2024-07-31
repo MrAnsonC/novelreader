@@ -5,38 +5,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const novelsPerPage = 10;
     let translations = {}; // Initialize translations
 
-    // Fetch and process novel data
-    fetch('data/novel.json')
-        .then(response => response.json())
-        .then(novelData => {
-            novels = shuffleArray(novelData); // Randomize novels
-            setupPagination(novels);
-            displayNovels(novels, currentPage);
-        })
-        .catch(error => console.error('Error loading novel data:', error));
+    // Fetch both novel data and translations together
+    Promise.all([
+        fetch('data/novel.json').then(response => response.json()),
+        fetch('data/language/index.json').then(response => response.json())
+    ])
+    .then(([novelData, translationData]) => {
+        novels = shuffleArray(novelData); // Randomize novels
+        translations = translationData;
 
-    // Fetch and process translations
-    fetch('data/language/index.json')
-        .then(response => response.json())
-        .then(data => {
-            translations = data;
-            applyTranslations(currentLanguage); // Apply default language
-            document.getElementById('languageSelector').value = currentLanguage;
-            
-            // Fetch novels after translations are applied
-            return fetch('data/novel.json');
-        })
-        .then(response => response.json())
-        .then(novelData => {
-            novels = shuffleArray(novelData); // Randomize novels
-            setupPagination(novels);
-            displayNovels(novels, currentPage);
-        })
-        .catch(error => console.error('Error loading data:', error));
+        // Apply translations and set up the page
+        applyTranslations(currentLanguage);
+        setupPagination(novels);
+        displayNovels(novels, currentPage);
+    })
+    .catch(error => console.error('Error loading data:', error));
 
     document.getElementById('languageSelector').addEventListener('change', (event) => {
         currentLanguage = event.target.value;
         applyTranslations(currentLanguage);
+        setupPagination(novels); // Re-setup pagination with new translations
         displayNovels(novels, currentPage); // Refresh novel display with new language
     });
 
@@ -54,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('sort').options[1].textContent = translations[language].word_low_to_high || 'Word count (low to high)';
             document.getElementById('platform_label').textContent = translations[language].platform || 'Platform';
             document.getElementById('platform').options[0].textContent = translations[language].all || 'All';
-            document.getElementById('platform').options[1].textContent = translations[language].tomato || 'Tomato';
+            document.getElementById('platform').options[1].textContent = translations[language].fanqie || 'Tomato';
             document.getElementById('platform').options[2].textContent = translations[language].feilu || 'Feilu';
             document.getElementById('platform').options[3].textContent = translations[language].qq_reading || 'QQ Reading';
             document.getElementById('platform').options[4].textContent = translations[language].other || 'Other';
@@ -85,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 1; i <= totalPages; i++) {
             const option = document.createElement('option');
             option.value = i;
-            option.textContent = `第${i}页 / 第${totalPages}页`;
+            option.textContent = `${translations[currentLanguage].page_id1}${i}${translations[currentLanguage].page_id2} / ${translations[currentLanguage].page_id1}${totalPages}${translations[currentLanguage].page_id2}`;
             rangeDropdown.appendChild(option);
         }
 
@@ -150,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <strong>${translations[currentLanguage].status}:</strong> <h2>${status}</h2>
                     </div>
                     <div>
-                        <strong>${translations[currentLanguage].word_count}:</strong> <h2 class="word-count">Calculating...</h2>
+                        <strong>${translations[currentLanguage].word_count}:</strong> <h2 class="word-count">${translations[currentLanguage].calculating}</h2>
                     </div>
                 </div>
             `;
@@ -218,13 +206,15 @@ document.addEventListener('DOMContentLoaded', () => {
         let filteredNovels = novels.filter(novel => {
             const matchesSearch = novel.name.toLowerCase().includes(searchValue) || searchValue === "";
             const matchesPlatform = platformValue === "all" || 
-                (platformValue === "起点/QQ阅读" ? (novel.platform === "起点" || novel.platform === "QQ阅读") : novel.platform === platformValue) ||
-                (platformValue === "其他" ? !["番茄", "飞卢小说", "起点", "QQ阅读"].includes(novel.platform)
-                     : novel.platform === platformValue);
+                (platformValue === "fanqie" ? (novel.platform === "番茄") : novel.platform === platformValue) ||
+                (platformValue === "feilu/shuqi" ? (novel.platform === "飞卢小说" || novel.platform === "书旗") : novel.platform === platformValue) ||
+                (platformValue === "qidian/qq_reading" ? (novel.platform === "起点" || novel.platform === "QQ阅读") : novel.platform === platformValue) ||
+                (platformValue === "other" ? !["番茄", "飞卢小说", "起点", "QQ阅读"].includes(novel.platform) : novel.platform === platformValue);
             const matchesState = statusValue === "all" ||
-                (statusValue === "断更/被封杀" ? (novel.status === "断更" || novel.status === "被封杀") : novel.status === statusValue) ||
-                (statusValue === "其他" ? !["已完结", "连载中", "断更", "被封杀"].includes(novel.status) 
-                    : novel.status === statusValue);
+                (statusValue === "completed" ? (novel.status === "已完结") : novel.status === statusValue) ||
+                (statusValue === "ongoing" ? (novel.status === "连载中") : novel.status === statusValue) ||
+                (statusValue === "discontinued" ? (novel.status === "断更" || novel.status === "被封杀") : novel.status === statusValue) ||
+                (statusValue === "other" ? !["已完结", "连载中", "断更", "被封杀"].includes(novel.status) : novel.status === statusValue);
             return matchesSearch && matchesPlatform && matchesState;
         });
 
