@@ -117,10 +117,10 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.add('novel-card');
 
             const image = novel.source.images || 'data/images/unknown.jpg';
-            const name = novel.name || 'Unknown';
-            const author = novel.author || 'Unknown';
-            const platform = novel.platform || 'Unknown';
-            const status = novel.status || 'Unknown';
+            const name = novel.name || '未知';
+            const author = novel.author || '未知';
+            const platform = novel.platform || '未知';
+            const status = novel.status || '未知';
 
             card.innerHTML = `
                 <div class="novel-image-container">
