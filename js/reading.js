@@ -17,11 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const textAlignSelector = document.getElementById('textAlignSelector');
     const textStyleSelector = document.getElementById('textStyleSelector');
     const textFamilySelector = document.getElementById('textFamilySelector');
+    const languageSelector = document.getElementById('languageSelector');
 
     // State Variables
     let chapters = [];
     let currentChapterIndex = 0;
     let isInChapterListView = false;
+    let languageData = {};
+    let currentLanguage = 'zh';
 
     // Retrieve saved settings from localStorage
     const savedFontSize = localStorage.getItem('fontSize');
@@ -29,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedTextAlign = localStorage.getItem('textAlign');
     const savedTextStyle = localStorage.getItem('textStyle');
     const savedTextFamily = localStorage.getItem('textFamily');
+    const savedLanguage = localStorage.getItem('language');
 
     // Set initial values from saved settings or defaults
     const initialFontSize = savedFontSize ? parseInt(savedFontSize) : 22;
@@ -36,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialTextAlign = savedTextAlign || 'left';
     const initialTextStyle = savedTextStyle || 'normal';
     const initialTextFamily = savedTextFamily || 'sans-serif';
+    currentLanguage = savedLanguage || 'zh';
 
     // Function to apply encoding
     function applyEncoding() {
@@ -68,12 +73,48 @@ document.addEventListener('DOMContentLoaded', () => {
     updateTextAlign(initialTextAlign);
     updateTextStyle(initialTextStyle);
     updateTextFamily(initialTextFamily);
+    languageSelector.value = currentLanguage;
 
     fontSizeSliderSidebar.value = initialFontSize;
     themeSelector.value = initialTheme;
     textAlignSelector.value = initialTextAlign;
     textStyleSelector.value = initialTextStyle;
     textFamilySelector.value = initialTextFamily;
+
+    fetch('data/languages.json')
+        .then(response => response.json())
+        .then(data => {
+            languageData = data;
+            applyLanguage(currentLanguage);
+        })
+        .catch(error => {
+            console.error('Error loading language data:', error);
+        });
+
+    languageSelector.addEventListener('change', () => {
+        currentLanguage = languageSelector.value;
+        localStorage.setItem('language', currentLanguage);
+        applyLanguage(currentLanguage);
+    });
+
+    function applyLanguage(language) {
+        const langData = languageData[language];
+        if (langData) {
+            document.title = langData.site_title;
+            document.getElementById('site_title_text').textContent = langData.site_title_text;
+            document.getElementById('backBtnSidebar').textContent = langData.backBtnSidebar;
+            document.getElementById('prevChapterSidebar').textContent = langData.prevChapterSidebar;
+            document.getElementById('chapterListSidebar').textContent = langData.chapterListSidebar;
+            document.getElementById('nextChapterSidebar').textContent = langData.nextChapterSidebar;
+            document.getElementById('fontSizeLabel').textContent = langData.fontSizeLabel;
+            document.getElementById('themeSelectorLabel').textContent = langData.themeSelectorLabel;
+            document.getElementById('textAlignSelectorLabel').textContent = langData.textAlignSelectorLabel;
+            document.getElementById('textStyleSelectorLabel').textContent = langData.textStyleSelectorLabel;
+            document.getElementById('textFamilySelectorLabel').textContent = langData.textFamilySelectorLabel;
+            document.getElementById('prevChapter').textContent = langData.footer_prevChapter;
+            document.getElementById('nextChapter').textContent = langData.footer_nextChapter;
+        }
+    }
 
     // Event Listeners
     themeSelector.addEventListener('change', (e) => {

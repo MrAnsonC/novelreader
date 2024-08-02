@@ -4,33 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="css/icon.jpg" type="image/x-icon">
-    <title>超级陈大爷小说网</title>
+    <title id="site_title">超级陈大爷小说网</title>
     <link rel="stylesheet" href="css/reading.css">
 </head>
 <body>
     <header>
         <button id="hamburger" class="hamburger">&#9776;</button>
         <a href="index.html" class="title-link">
-            <h1>超级陈大爷小说网</h1>
+            <h1 id="site_title_text">超级陈大爷小说网</h1>
         </a>
+        <select id="languageSelector">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+        </select>
     </header>
 
     <aside id="menu" class="menu">
         <button id="backBtnSidebar" class="aside-btn">返回</button>
-        <ul> 
+        <ul>
             <li><button id="closeMenu" class="close-btn">关闭</button></li>
             <li><button id="prevChapterSidebar">上一章</button></li>
             <li><button id="chapterListSidebar">章节列表</button></li>
             <li><button id="nextChapterSidebar">下一章</button></li>
             <div id="chapterList" class="chapter-list"></div>
             <li>
-                <label for="fontSizeSliderSidebar">字体大小:</label>
+                <label for="fontSizeSliderSidebar" id="fontSizeLabel">字体大小:</label>
                 <span id="fontSizeValueSidebar">22</span>
                 <input type="range" id="fontSizeSliderSidebar" min="10" max="46" value="22">
             </li>
-            
-            <li>    
-                <label for="themeSelector">背景颜色:</label>
+            <li>
+                <label for="themeSelector" id="themeSelectorLabel">背景颜色:</label>
                 <select id="themeSelector">
                     <option value="white-black">白色背景</option>
                     <option value="black-white">黑色背景</option>
@@ -38,18 +41,16 @@
                     <option value="lightyellow-black">浅黄色背景</option>
                 </select>
             </li>
-
             <li>
-                <label for="textAlignSelector">文字对齐:</label>
+                <label for="textAlignSelector" id="textAlignSelectorLabel">文字对齐:</label>
                 <select id="textAlignSelector">
                     <option value="left">左对齐</option>
                     <option value="center">居中</option>
                     <option value="right">右对齐</option>
                 </select>
             </li>
-
             <li>
-                <label for="textStyleSelector">文字样式:</label>
+                <label for="textStyleSelector" id="textStyleSelectorLabel">文字样式:</label>
                 <select id="textStyleSelector">
                     <option value="normal">普通</option>
                     <option value="Italic">斜体</option>
@@ -57,24 +58,22 @@
                     <option value="boldItalic">粗斜体</option>
                 </select>
             </li>
-
             <li>
-                <label for="textFamilySelector">字体:</label>
+                <label for="textFamilySelector" id="textFamilySelectorLabel">字体:</label>
                 <select id="textFamilySelector">
                     <option value="sans-serif">无衬线字体</option>
-                    <option value="HYDiShengXiaRiTiU">汉仪迪升夏日</option>   
+                    <option value="HYDiShengXiaRiTiU">汉仪迪升夏日</option>
                     <option value="MaShanZheng">马善政楷书</option>
                     <option value="LiuJianMaoCao">流江毛草</option>
-                    <option value="LongCang">龙藏体</option> 
+                    <option value="LongCang">龙藏体</option>
                     <option value="XiangJiaoLvSenKaFeiLingGanTi">香蕉绿森咖啡</option>
                     <option value="ZhiMangXing">钟齐志莽行</option>
-                    <option value="ZCOOLKuaiLe">站酷快乐</option> 
+                    <option value="ZCOOLKuaiLe">站酷快乐</option>
                     <option value="ZCOOLQingKeHuangYou">站酷庆科黄油</option>
                     <option value="ZCOOLXiaoWei">站酷小薇</option>
-                    <option value="NotoSerifSC">思源宋体</option> 
+                    <option value="NotoSerifSC">思源宋体</option>
                 </select>
-            </li>        
-            
+            </li>
         </ul>
     </aside>
 
