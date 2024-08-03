@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentChapterIndex = 0;
     let isInChapterListView = false;
     let languageData = {};
-    let currentLanguage = 'zh';
+    let currentLanguage = 'zh_chs';
 
     // Retrieve saved settings from localStorage
     const savedFontSize = localStorage.getItem('fontSize');
@@ -40,7 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialTextAlign = savedTextAlign || 'left';
     const initialTextStyle = savedTextStyle || 'normal';
     const initialTextFamily = savedTextFamily || 'sans-serif';
-    currentLanguage = savedLanguage || 'zh';
+    currentLanguage = savedLanguage || 'zh_chs';
+
+    console.log('Initial Language:', currentLanguage);
 
     // Function to apply encoding
     function applyEncoding() {
@@ -51,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('copy', handleCopy);
     }
 
-    // Drag start handler
     function handleDragStart(event) {
         const selectedText = window.getSelection().toString();
         const encodedText = encodeTextRandomly(selectedText);
@@ -81,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     textStyleSelector.value = initialTextStyle;
     textFamilySelector.value = initialTextFamily;
 
-    fetch('data/languages.json')
+    fetch('data/language/reading.json')
         .then(response => response.json())
         .then(data => {
             languageData = data;
@@ -103,19 +104,50 @@ document.addEventListener('DOMContentLoaded', () => {
             document.title = langData.site_title;
             document.getElementById('site_title_text').textContent = langData.site_title_text;
             document.getElementById('backBtnSidebar').textContent = langData.backBtnSidebar;
+            document.getElementById('closeMenu').textContent = langData.closeMenu;
             document.getElementById('prevChapterSidebar').textContent = langData.prevChapterSidebar;
             document.getElementById('chapterListSidebar').textContent = langData.chapterListSidebar;
             document.getElementById('nextChapterSidebar').textContent = langData.nextChapterSidebar;
             document.getElementById('fontSizeLabel').textContent = langData.fontSizeLabel;
             document.getElementById('themeSelectorLabel').textContent = langData.themeSelectorLabel;
+            document.getElementById('whitebgd').textContent = langData.whiteBackground;
+            document.getElementById('blackbgd').textContent = langData.blackBackground;
+            document.getElementById('lbluebgd').textContent = langData.lblueBackground;
+            document.getElementById('lyellowbgd').textContent = langData.lyellowBackground;
+            
+            //Text align
             document.getElementById('textAlignSelectorLabel').textContent = langData.textAlignSelectorLabel;
+            document.getElementById('textAlignLeft').textContent = langData.textAlignL;
+            document.getElementById('textAlignCentre').textContent = langData.textAlignC;
+            document.getElementById('textAlignRight').textContent = langData.textAlignR;
+
+            //Text style
             document.getElementById('textStyleSelectorLabel').textContent = langData.textStyleSelectorLabel;
+            document.getElementById('textStylenormal').textContent = langData.textStylenormal;
+            document.getElementById('textStyleItalic').textContent = langData.textStyleItalic;
+            document.getElementById('textStylebold').textContent = langData.textStylebold;
+            document.getElementById('textStyleboldItalic').textContent = langData.textStyleboldItalic;
+
+            //Text family
             document.getElementById('textFamilySelectorLabel').textContent = langData.textFamilySelectorLabel;
+            document.getElementById('sans-serif').textContent = langData.sans_serif;
+            document.getElementById('HYDiShengXiaRiTiU').textContent = langData.hydishemg;
+            document.getElementById('MaShanZheng').textContent = langData.mashanzheng;
+            document.getElementById('LiuJianMaoCao').textContent = langData.LiuJianMaoCao;
+            document.getElementById('LongCang').textContent = langData.LongCang;
+            document.getElementById('XiangJiaoLvSenKaFeiLingGanTi').textContent = langData.XiangJiaoLvSenKaFeiLingGanTi;
+            document.getElementById('ZhiMangXing').textContent = langData.ZhiMangXing;
+            document.getElementById('ZCOOLKuaiLe').textContent = langData.ZCOOLKuaiLe;
+            document.getElementById('ZCOOLQingKeHuangYou').textContent = langData.ZCOOLQingKeHuangYou;
+            document.getElementById('ZCOOLXiaoWei').textContent = langData.ZCOOLXiaoWei;
+            document.getElementById('NotoSerifSC').textContent = langData.NotoSerifSC;
+
             document.getElementById('prevChapter').textContent = langData.footer_prevChapter;
             document.getElementById('nextChapter').textContent = langData.footer_nextChapter;
+            document.getElementById('languageSelectorLabel').textContent = langData.languageSelectorLabel;
         }
     }
-
+    
     // Event Listeners
     themeSelector.addEventListener('change', (e) => {
         updateTheme(e.target.value);
