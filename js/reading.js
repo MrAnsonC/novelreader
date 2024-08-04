@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentChapterIndex = 0;
     let isInChapterListView = false;
     let languageData = {};
-    let currentLanguage = 'zh_chs';
+    let translations = {};
+    let currentLanguage = localStorage.getItem('selectedLanguage') || 'zh_chs';
+    document.getElementById('languageSelector').value = currentLanguage;
 
     // Retrieve saved settings from localStorage
     const savedFontSize = localStorage.getItem('fontSize');
@@ -82,11 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
     textStyleSelector.value = initialTextStyle;
     textFamilySelector.value = initialTextFamily;
 
-    fetch('data/language/reading.json')
+    fetch('data/languages.json')
         .then(response => response.json())
         .then(data => {
             languageData = data;
-            applyLanguage(currentLanguage);
+            applyLanguage(currentLanguage, data);
         })
         .catch(error => {
             console.error('Error loading language data:', error);

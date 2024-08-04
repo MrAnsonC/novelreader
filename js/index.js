@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch both novel data and translations together
     Promise.all([
         fetch('data/novel.json').then(response => response.json()),
-        fetch('data/language/index.json').then(response => response.json())
+        fetch('data/languages.json').then(response => response.json())
     ])
     .then(([novelData, translationData]) => {
         novels = shuffleArray(novelData); // Randomize novels
@@ -28,9 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
         currentLanguage = event.target.value;
         localStorage.setItem('selectedLanguage', currentLanguage);
         applyTranslations(currentLanguage);
-        setupPagination(novels); // Re-setup pagination with new translations
-        displayNovels(novels, currentPage); // Refresh novel display with new language
+        setupPagination(novels); 
+        displayNovels(novels, currentPage); 
     });
+
+    applyTranslations(currentLanguage);
 
     // Function to apply translations based on the selected language
     function applyTranslations(language) {

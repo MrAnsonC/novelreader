@@ -288,5 +288,115 @@
             "images": "data/images/我在名侦探世界打酱油(武辰佑).jpg",
             "resources": "data/txt/已完结/我在名侦探世界打酱油(武辰佑).txt"
         }
+    },
+    {
+        "name": "柯南：成为宫野妹妹后",
+        "author": "月文溪",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/柯南：成为宫野妹妹后(月文溪).jpg",
+            "resources": "data/txt/已完结/柯南：成为宫野妹妹后(月文溪).txt"
+        }
+    },
+    {
+        "name": "我，小岛元太，带领酒厂逆风翻盘",
+        "author": "李芒种",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/我，小岛元太，带领酒厂逆风翻盘(李芒种).jpg",
+            "resources": "data/txt/已完结/我，小岛元太，带领酒厂逆风翻盘(李芒种).txt"
+        }
+    },
+    {
+        "name": "身份互换大挑战，我震惊了全世界",
+        "author": "兔兔那么可爱",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/身份互换大挑战，我震惊了全世界(兔兔那么可爱).jpg",
+            "resources": "data/txt/已完结/身份互换大挑战，我震惊了全世界(兔兔那么可爱).txt"
+        }
+    },
+    {
+        "name": "刚变吸血鬼，就被校花学姐抓回家",
+        "author": "纯洁的小橘",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/刚变吸血鬼，就被校花学姐抓回家(纯洁的小橘).jpg",
+            "resources": "data/txt/已完结/刚变吸血鬼，就被校花学姐抓回家(纯洁的小橘).txt"
+        }
+    },
+    {
+        "name": "柯学：开局变傻，小哀姐姐求抱抱",
+        "author": "舒故",
+        "platform": "番茄",
+        "status": "连载中",
+        "source": {
+            "images": "data/images/柯学：开局变傻，小哀姐姐求抱抱(舒故).jpg",
+            "resources": "data/txt/连载中/柯学：开局变傻，小哀姐姐求抱抱(舒故).txt"
+        }
+    },
+    {
+        "name": "名柯：和死神做同学",
+        "author": "七只碗",
+        "platform": "番茄",
+        "status": "连载中",
+        "source": {
+            "images": "data/images/名柯：和死神做同学(七只碗).jpg",
+            "resources": "data/txt/连载中/名柯：和死神做同学(七只碗).txt"
+        }
+    },
+    {
+        "name": "柯南：酒厂杀手对灰原情有独钟",
+        "author": "横竖都是一",
+        "platform": "番茄",
+        "status": "连载中",
+        "source": {
+            "images": "data/images/柯南：酒厂杀手对灰原情有独钟(横竖都是一).jpg",
+            "resources": "data/txt/连载中/柯南：酒厂杀手对灰原情有独钟(横竖都是一).txt"
+        }
+    },
+    {
+        "name": "被血族校花看上后，我人麻了",
+        "author": "一株草斩尽日月星辰",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/被血族校花看上后，我人麻了(一株草斩尽日月星辰).jpg",
+            "resources": "data/txt/已完结/被血族校花看上后，我人麻了(一株草斩尽日月星辰).txt"
+        }
+    },
+    {
+        "name": "破案微苦，我姐超甜",
+        "author": "KISS云中",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/破案微苦，我姐超甜(KISS云中).jpg",
+            "resources": "data/txt/已完结/破案微苦，我姐超甜(KISS云中).txt"
+        }
+    },
+    {
+        "name": "柯南之超能力大魔王",
+        "author": "张亚里",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/柯南之超能力大魔王(张亚里).jpg",
+            "resources": "data/txt/已完结/柯南之超能力大魔王(张亚里).txt"
+        }
+    },
+    {
+        "name": "让你去历练，怎么全球都要活捉你",
+        "author": "战神奶爸",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/让你去历练，怎么全球都要活捉你(战神奶爸).jpg",
+            "resources": "data/txt/已完结/让你去历练，怎么全球都要活捉你(战神奶爸).txt"
+        }
     }
 ]
