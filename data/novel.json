@@ -558,5 +558,205 @@
             "images": "data/images/都市：修仙十年，下山即无敌(冯一病).jpg",
             "resources": "data/txt/已完结/都市：修仙十年，下山即无敌(冯一病).txt"
         }
+    },
+    {
+        "name": "以我深情祭岁月",
+        "author": "二乔",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/以我深情祭岁月(二乔).jpg",
+            "resources": "data/txt/已完结/以我深情祭岁月(二乔).txt"
+        }
+    },
+    {
+        "name": "还剩三个月命，请让我从容赴死",
+        "author": "高卧北",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/还剩三个月命，请让我从容赴死(高卧北).jpg",
+            "resources": "data/txt/已完结/还剩三个月命，请让我从容赴死(高卧北).txt"
+        }
+    },
+    {
+        "name": "藏于盛夏",
+        "author": "秋日凉",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/藏于盛夏(秋日凉).jpg",
+            "resources": "data/txt/已完结/藏于盛夏(秋日凉).txt"
+        }
+    },
+    {
+        "name": "青山似玉",
+        "author": "玛瑙员外",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/青山似玉(玛瑙员外).jpg",
+            "resources": "data/txt/已完结/青山似玉(玛瑙员外).txt"
+        }
+    },
+    {
+        "name": "冤种全家听我心声后，全员黑化",
+        "author": "星茴",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/冤种全家听我心声后，全员黑化(星茴).jpg",
+            "resources": "data/txt/已完结/冤种全家听我心声后，全员黑化(星茴).txt"
+        }
+    },
+    {
+        "name": "反派儿子你跪下，妈求你点事",
+        "author": "黑麦威士忌",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/反派儿子你跪下，妈求你点事(黑麦威士忌).jpg",
+            "resources": "data/txt/已完结/反派儿子你跪下，妈求你点事(黑麦威士忌).txt"
+        }
+    },
+    {
+        "name": "另谋高嫁：这侯府夫人我不做了！",
+        "author": "晴天白鹭",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/另谋高嫁：这侯府夫人我不做了！(晴天白鹭).jpg",
+            "resources": "data/txt/已完结/另谋高嫁：这侯府夫人我不做了！(晴天白鹭).txt"
+        }
+    },
+    {
+        "name": "相亲走错桌，辣媳妇闪军婚踹渣爹",
+        "author": "十月霜华",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/相亲走错桌，辣媳妇闪军婚踹渣爹(十月霜华).jpg",
+            "resources": "data/txt/已完结/相亲走错桌，辣媳妇闪军婚踹渣爹(十月霜华).txt"
+        }
+    },
+    {
+        "name": "一花一酒一仙人，亦眠亦醉亦长生",
+        "author": "少吃亿点",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/一花一酒一仙人，亦眠亦醉亦长生(少吃亿点).jpg",
+            "resources": "data/txt/已完结/一花一酒一仙人，亦眠亦醉亦长生(少吃亿点).txt"
+        }
+    },
+    {
+        "name": "全宗门都是恋爱脑，唯我是真疯批",
+        "author": "纸老虎",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/全宗门都是恋爱脑，唯我是真疯批(纸老虎).jpg",
+            "resources": "data/txt/已完结/全宗门都是恋爱脑，唯我是真疯批(纸老虎).txt"
+        }
+    },
+    {
+        "name": "团宠小福女，她是财神爷的亲闺女",
+        "author": "指墨随风",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/团宠小福女，她是财神爷的亲闺女(指墨随风).jpg",
+            "resources": "data/txt/已完结/团宠小福女，她是财神爷的亲闺女(指墨随风).txt"
+        }
+    },
+    {
+        "name": "七零小妻被撩！腹黑军官红眼失控",
+        "author": "失而",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/七零小妻被撩！腹黑军官红眼失控(失而).jpg",
+            "resources": "data/txt/已完结/七零小妻被撩！腹黑军官红眼失控(失而).txt"
+        }
+    },
+    {
+        "name": "不懂别乱说，我这不是杂灵根",
+        "author": "木水水水",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/不懂别乱说，我这不是杂灵根(木水水水).jpg",
+            "resources": "data/txt/已完结/不懂别乱说，我这不是杂灵根(木水水水).txt"
+        }
+    },
+    {
+        "name": "从前有座镇妖关",
+        "author": "徐二家的猫",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/从前有座镇妖关(徐二家的猫).jpg",
+            "resources": "data/txt/已完结/从前有座镇妖关(徐二家的猫).txt"
+        }
+    },
+    {
+        "name": "只要有血条，神明也杀给你看",
+        "author": "不吃鱼粥",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/只要有血条，神明也杀给你看(不吃鱼粥).jpg",
+            "resources": "data/txt/已完结/只要有血条，神明也杀给你看(不吃鱼粥).txt"
+        }
+    },
+    {
+        "name": "XXXXXXX",
+        "author": "XXXXXXX",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/XXXXXXX.jpg",
+            "resources": "data/txt/已完结/XXXXXXX.txt"
+        }
+    },
+    {
+        "name": "XXXXXXX",
+        "author": "XXXXXXX",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/XXXXXXX.jpg",
+            "resources": "data/txt/已完结/XXXXXXX.txt"
+        }
+    },
+    {
+        "name": "模拟犯罪十万次，我竟成王牌神探",
+        "author": "初秋微寒",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/模拟犯罪十万次，我竟成王牌神探(初秋微寒).jpg",
+            "resources": "data/txt/已完结/模拟犯罪十万次，我竟成王牌神探(初秋微寒).txt"
+        }
+    },
+    {
+        "name": "我祖父是朱元璋",
+        "author": "岁月神偷",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/我祖父是朱元璋(岁月神偷).jpg",
+            "resources": "data/txt/已完结/我祖父是朱元璋(岁月神偷).txt"
+        }
+    },
+    {
+        "name": "重生1993，暗海",
+        "author": "神想出去浪",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/重生1993，暗海(神想出去浪).jpg",
+            "resources": "data/txt/已完结/重生1993，暗海(神想出去浪).txt"
+        }
     }
 ]
