@@ -1,7 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => { 
     let novels = [];
-    let currentPage = 1;
-    const novelsPerPage = 10;
     let translations = {}; // Initialize translations
 
     // Load the saved language or set default language
@@ -19,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Apply translations and set up the page
         applyTranslations(currentLanguage);
-        setupPagination(novels);
-        displayNovels(novels, currentPage);
+        displayNovels(novels); // Display all novels without pagination
     })
     .catch(error => console.error('Error loading data:', error));
 
@@ -28,11 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
         currentLanguage = event.target.value;
         localStorage.setItem('selectedLanguage', currentLanguage);
         applyTranslations(currentLanguage);
-        setupPagination(novels); 
-        displayNovels(novels, currentPage); 
+        displayNovels(novels); // Re-render all novels when the language changes
     });
-
-    applyTranslations(currentLanguage);
 
     // Function to apply translations based on the selected language
     function applyTranslations(language) {
@@ -49,9 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('platform_label').textContent = translations[language].platform || 'Platform';
             document.getElementById('platform').options[0].textContent = translations[language].all || 'All';
             document.getElementById('platform').options[1].textContent = translations[language].fanqie || 'Tomato';
-            document.getElementById('platform').options[2].textContent = translations[language].feilu || 'Feilu';
-            document.getElementById('platform').options[3].textContent = translations[language].qq_reading || 'QQ Reading';
-            document.getElementById('platform').options[4].textContent = translations[language].other || 'Other';
+            document.getElementById('platform').options[2].textContent = translations[language].huaben || 'Huaben';
+            document.getElementById('platform').options[3].textContent = translations[language].feilu || 'Feilu';
+            document.getElementById('platform').options[4].textContent = translations[language].qq_reading || 'QQ Reading';
+            document.getElementById('platform').options[5].textContent = translations[language].other || 'Other';
             document.getElementById('status_label').textContent = translations[language].status || 'Status';
             document.getElementById('status').options[0].textContent = translations[language].all || 'All';
             document.getElementById('status').options[1].textContent = translations[language].completed || 'Completed';
@@ -60,8 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('status').options[4].textContent = translations[language].other || 'Other';
             document.getElementById('filterResults').textContent = translations[language].find_novels || 'Find Novels';
             document.getElementById('resetFilters').textContent = translations[language].reset || 'Reset';
-            document.getElementById('prevPage').textContent = translations[language].previous_page || 'Previous Page';
-            document.getElementById('nextPage').textContent = translations[language].next_page || 'Next Page';
             document.getElementById('created_by').textContent = translations[language].created_by || 'Created by';
             document.getElementById('language_Selector').textContent = translations[language].languageSelector || 'Language Selector';
         } else {
@@ -69,56 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Function to setup pagination
-    function setupPagination(novels) {
-        const totalPages = Math.ceil(novels.length / novelsPerPage);
-        const rangeDropdown = document.getElementById('rangeDropdown');
-        const contentDiv = document.getElementById('headering'); 
-        rangeDropdown.innerHTML = ''; // Clear previous options
-
-        for (let i = 1; i <= totalPages; i++) {
-            const option = document.createElement('option');
-            option.value = i;
-            option.textContent = `${translations[currentLanguage].page_id1}${i}${translations[currentLanguage].page_id2} / ${translations[currentLanguage].page_id1}${totalPages}${translations[currentLanguage].page_id2}`;
-            rangeDropdown.appendChild(option);
-        }
-
-        rangeDropdown.addEventListener('change', () => {
-            currentPage = parseInt(rangeDropdown.value);
-            displayNovels(novels, currentPage);
-            contentDiv.scrollIntoView({ behavior: 'instant' });
-        });
-
-        document.getElementById('prevPage').addEventListener('click', () => {
-            if (currentPage > 1) {
-                currentPage--;
-                rangeDropdown.value = currentPage;
-                displayNovels(novels, currentPage);
-                contentDiv.scrollIntoView({ behavior: 'instant' });
-            }
-        });
-
-        document.getElementById('nextPage').addEventListener('click', () => {
-            const totalPages = Math.ceil(novels.length / novelsPerPage);
-            if (currentPage < totalPages) {
-                currentPage++;
-                rangeDropdown.value = currentPage;
-                displayNovels(novels, currentPage);
-                contentDiv.scrollIntoView({ behavior: 'instant' });
-            }
-        });
-    }
-
-    // Function to display novels
-    function displayNovels(novels, page) {
+    // Function to display all novels (without pagination)
+    function displayNovels(novels) {
         const novelCardsContainer = document.getElementById('novel_card');
-        novelCardsContainer.innerHTML = '';
+        novelCardsContainer.innerHTML = ''; // Clear any existing novels
 
-        const startIndex = (page - 1) * novelsPerPage;
-        const endIndex = Math.min(startIndex + novelsPerPage, novels.length);
-        const novelsToDisplay = novels.slice(startIndex, endIndex);
-
-        novelsToDisplay.forEach(novel => {
+        novels.forEach(novel => {
             const card = document.createElement('div');
             card.classList.add('novel-card');
 
@@ -213,9 +162,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const matchesSearch = novel.name.toLowerCase().includes(searchValue) || searchValue === "";
             const matchesPlatform = platformValue === "all" || 
                 (platformValue === "fanqie" ? (novel.platform === "番茄") : novel.platform === platformValue) ||
+                (platformValue === "huaben" ? (novel.platform === "话本") : novel.platform === platformValue) ||
                 (platformValue === "feilu/shuqi" ? (novel.platform === "飞卢小说" || novel.platform === "书旗") : novel.platform === platformValue) ||
                 (platformValue === "qidian/qq_reading" ? (novel.platform === "起点" || novel.platform === "QQ阅读") : novel.platform === platformValue) ||
-                (platformValue === "other" ? !["番茄", "飞卢小说", "起点", "QQ阅读"].includes(novel.platform) : novel.platform === platformValue);
+                (platformValue === "other" ? !["番茄", "飞卢小说", "起点", "QQ阅读", "书旗"].includes(novel.platform) : novel.platform === platformValue);
             const matchesState = statusValue === "all" ||
                 (statusValue === "completed" ? (novel.status === "已完结") : novel.status === statusValue) ||
                 (statusValue === "ongoing" ? (novel.status === "连载中") : novel.status === statusValue) ||
@@ -246,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 updatedNovels.sort((a, b) => a.wordCount - b.wordCount);
             }
 
-            displayNovels(updatedNovels, currentPage);
+            displayNovels(updatedNovels);
             document.getElementById('filter').style.transform = 'translateX(-100%)';
         });
     });
@@ -256,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('sort').value = 'word_high_to_low';
         document.getElementById('platform').value = 'all';
         document.getElementById('status').value = 'all';
-        displayNovels(novels, currentPage); // Display all novels after reset
+        displayNovels(novels); // Display all novels after reset
     });
 
     // Event listeners for hamburger menu

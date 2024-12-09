@@ -710,26 +710,6 @@
         }
     },
     {
-        "name": "XXXXXXX",
-        "author": "XXXXXXX",
-        "platform": "番茄",
-        "status": "已完结",
-        "source": {
-            "images": "data/images/XXXXXXX.jpg",
-            "resources": "data/txt/已完结/XXXXXXX.txt"
-        }
-    },
-    {
-        "name": "XXXXXXX",
-        "author": "XXXXXXX",
-        "platform": "番茄",
-        "status": "已完结",
-        "source": {
-            "images": "data/images/XXXXXXX.jpg",
-            "resources": "data/txt/已完结/XXXXXXX.txt"
-        }
-    },
-    {
         "name": "模拟犯罪十万次，我竟成王牌神探",
         "author": "初秋微寒",
         "platform": "番茄",
@@ -757,6 +737,56 @@
         "source": {
             "images": "data/images/重生1993，暗海(神想出去浪).jpg",
             "resources": "data/txt/已完结/重生1993，暗海(神想出去浪).txt"
+        }
+    },
+    {
+        "name": "穿越到约战成为了新精灵",
+        "author": "GH绿意",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/穿越到约战成为了新精灵(GH绿意).jpg",
+            "resources": "data/txt/已完结/穿越到约战成为了新精灵(GH绿意).txt"
+        }
+    },
+    {
+        "name": "哈利波特之她的存在",
+        "author": "临知意",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/哈利波特之她的存在(临知意).jpg",
+            "resources": "data/txt/已完结/哈利波特之她的存在(临知意).txt"
+        }
+    },
+    {
+        "name": "约战之重生当AST部长",
+        "author": "乱世杀神卍坠天使",
+        "platform": "话本",
+        "status": "断更",
+        "source": {
+            "images": "data/images/约战之重生当AST部长(乱世杀神卍坠天使).jpg",
+            "resources": "data/txt/断更/约战之重生当AST部长(乱世杀神卍坠天使).txt"
+        }
+    },
+    {
+        "name": "约会大作战反转精灵",
+        "author": "134***582_8940973185",
+        "platform": "话本",
+        "status": "断更",
+        "source": {
+            "images": "data/images/约会大作战反转精灵(134___582_8940973185).jpg",
+            "resources": "data/txt/断更/约会大作战反转精灵(134___582_8940973185).txt"
+        }
+    },
+    {
+        "name": "怪盗基德：月下雨幕",
+        "author": "冰小妖",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/怪盗基德：月下雨幕(冰小妖).jpg",
+            "resources": "data/txt/已完结/怪盗基德：月下雨幕(冰小妖).txt"
         }
     }
 ]

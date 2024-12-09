@@ -172,6 +172,7 @@ main {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
+    
 }
 
 .chapter-title {
@@ -294,6 +295,11 @@ input[type="range"] {
 @font-face {
     font-family: 'ZhiMangXing'; 
     src: url('fonts/ZhiMangXing.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Genryu-font-CHT'; 
+    src: url('fonts/Genryu-font-CHT.ttf') format('truetype');
 }
 
 @font-face {

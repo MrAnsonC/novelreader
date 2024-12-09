@@ -143,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('ZCOOLQingKeHuangYou').textContent = langData.ZCOOLQingKeHuangYou;
             document.getElementById('ZCOOLXiaoWei').textContent = langData.ZCOOLXiaoWei;
             document.getElementById('NotoSerifSC').textContent = langData.NotoSerifSC;
+            document.getElementById('Genryu-font-CHT').textContent = langData.Genryu-font-CHT;
 
             document.getElementById('prevChapter').textContent = langData.footer_prevChapter;
             document.getElementById('nextChapter').textContent = langData.footer_nextChapter;
