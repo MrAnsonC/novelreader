@@ -788,5 +788,135 @@
             "images": "data/images/怪盗基德：月下雨幕(冰小妖).jpg",
             "resources": "data/txt/已完结/怪盗基德：月下雨幕(冰小妖).txt"
         }
+    },
+    {
+        "name": "柯南之侦探小姐的怪盗先生",
+        "author": "栗子_Kuriko",
+        "platform": "话本",
+        "status": "断更",
+        "source": {
+            "images": "data/images/柯南之侦探小姐的怪盗先生(栗子_Kuriko).jpg",
+            "resources": "data/txt/断更/柯南之侦探小姐的怪盗先生(栗子_Kuriko).txt"
+        }
+    },
+    {
+        "name": "柯南：景光的专属女巫",
+        "author": "樱桃桑葚",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/柯南：景光的专属女巫(樱桃桑葚).jpg",
+            "resources": "data/txt/已完结/柯南：景光的专属女巫(樱桃桑葚).txt"
+        }
+    },
+    {
+        "name": "HP：你是我的骄傲",
+        "author": "Ailsa-Slytherin",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/HP：你是我的骄傲(Ailsa-Slytherin).jpg",
+            "resources": "data/txt/已完结/HP：你是我的骄傲(Ailsa-Slytherin).txt"
+        }
+    },
+    {
+        "name": "HP四巨头在子世代",
+        "author": "执落白",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/HP四巨头在子世代(执落白).jpg",
+            "resources": "data/txt/已完结/HP四巨头在子世代(执落白).txt"
+        }
+    },
+    {
+        "name": "HP教授的狐狸女儿",
+        "author": "雪影恋情",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/HP教授的狐狸女儿(雪影恋情).jpg",
+            "resources": "data/txt/已完结/HP教授的狐狸女儿(雪影恋情).txt"
+        }
+    },
+    {
+        "name": "HP：不要忘记我爱你",
+        "author": "风清气正",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/HP：不要忘记我爱你(风清气正).jpg",
+            "resources": "data/txt/已完结/HP：不要忘记我爱你(风清气正).txt"
+        }
+    },
+    {
+        "name": "HP：为她学乖",
+        "author": "姜江绛暖_",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/HP：为她学乖(姜江绛暖_).jpg",
+            "resources": "data/txt/已完结/HP：为她学乖(姜江绛暖_).txt"
+        }
+    },
+    {
+        "name": "HP：努力不可为",
+        "author": "盐系乌龙茶",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/HP：努力不可为(盐系乌龙茶).jpg",
+            "resources": "data/txt/已完结/HP：努力不可为(盐系乌龙茶).txt"
+        }
+    },
+    {
+        "name": "HP：我来到了以前的霍格沃兹",
+        "author": "偷挖小白菜y",
+        "platform": "话本",
+        "status": "断更",
+        "source": {
+            "images": "data/images/HP：我来到了以前的霍格沃兹(偷挖小白菜y).jpg",
+            "resources": "data/txt/断更/HP：我来到了以前的霍格沃兹(偷挖小白菜y).txt"
+        }
+    },
+    {
+        "name": "HP：马尔福小姐只想赚钱",
+        "author": "奶茶加布丁",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/HP：马尔福小姐只想赚钱(奶茶加布丁).jpg",
+            "resources": "data/txt/已完结/HP：马尔福小姐只想赚钱(奶茶加布丁).txt"
+        }
+    },
+    {
+        "name": "HP：最强魔药收购商",
+        "author": "奶茶加布丁",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/HP：最强魔药收购商(奶茶加布丁).jpg",
+            "resources": "data/txt/已完结/HP：最强魔药收购商(奶茶加布丁).txt"
+        }
+    },
+    {
+        "name": "HP：新月眼与月亮脸",
+        "author": "奶茶加布丁",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/HP：新月眼与月亮脸(奶茶加布丁).jpg",
+            "resources": "data/txt/已完结/HP：新月眼与月亮脸(奶茶加布丁).txt"
+        }
+    },
+    {
+        "name": "HP之反转人生",
+        "author": "柠檬涩涩",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/HP之反转人生(柠檬涩涩).jpg",
+            "resources": "data/txt/已完结/HP之反转人生(柠檬涩涩).txt"
+        }
     }
 ]
