@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 (platformValue === "huaben" ? (novel.platform === "话本") : novel.platform === platformValue) ||
                 (platformValue === "feilu/shuqi" ? (novel.platform === "飞卢小说" || novel.platform === "书旗") : novel.platform === platformValue) ||
                 (platformValue === "qidian/qq_reading" ? (novel.platform === "起点" || novel.platform === "QQ阅读") : novel.platform === platformValue) ||
-                (platformValue === "other" ? !["番茄", "飞卢小说", "起点", "QQ阅读", "书旗"].includes(novel.platform) : novel.platform === platformValue);
+                (platformValue === "other" ? !["番茄", "话本", "飞卢小说", "起点", "QQ阅读", "书旗"].includes(novel.platform) : novel.platform === platformValue);
             const matchesState = statusValue === "all" ||
                 (statusValue === "completed" ? (novel.status === "已完结") : novel.status === statusValue) ||
                 (statusValue === "ongoing" ? (novel.status === "连载中") : novel.status === statusValue) ||
