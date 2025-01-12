@@ -918,5 +918,65 @@
             "images": "data/images/HP之反转人生(柠檬涩涩).jpg",
             "resources": "data/txt/已完结/HP之反转人生(柠檬涩涩).txt"
         }
+    },
+    {
+        "name": "HP之反转人生",
+        "author": "柠檬涩涩",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/HP之反转人生(柠檬涩涩).jpg",
+            "resources": "data/txt/已完结/HP之反转人生(柠檬涩涩).txt"
+        }
+    },
+    {
+        "name": "名侦探柯南：当猎人穿到柯南世界",
+        "author": "赛娃",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/名侦探柯南：当猎人穿到柯南世界(赛娃).jpg",
+            "resources": "data/txt/已完结/名侦探柯南：当猎人穿到柯南世界(赛娃).txt"
+        }
+    },
+    {
+        "name": "哈利波特食死徒利迪亚冈特",
+        "author": "波利",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/哈利波特食死徒利迪亚冈特(波利).jpg",
+            "resources": "data/txt/已完结/哈利波特食死徒利迪亚冈特(波利).txt"
+        }
+    },
+    {
+        "name": "原神：伴你阅遍千秋",
+        "author": "坂日澪",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/原神：伴你阅遍千秋(坂日澪).jpg",
+            "resources": "data/txt/已完结/原神：伴你阅遍千秋(坂日澪).txt"
+        }
+    },
+    {
+        "name": "哈利波特魔法觉醒：再见霍格沃茨",
+        "author": "坂日澪",
+        "platform": "话本",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/哈利波特魔法觉醒：再见霍格沃茨(坂日澪).jpg",
+            "resources": "data/txt/已完结/哈利波特魔法觉醒：再见霍格沃茨(坂日澪).txt"
+        }
+    },
+    {
+        "name": "反派魔法少女，每日任务就是找茬",
+        "author": "十万水星",
+        "platform": "番茄",
+        "status": "连载中",
+        "source": {
+            "images": "data/images/反派魔法少女，每日任务就是找茬(十万水星).jpg",
+            "resources": "data/txt/连载中/反派魔法少女，每日任务就是找茬(十万水星).txt"
+        }
     }
 ]

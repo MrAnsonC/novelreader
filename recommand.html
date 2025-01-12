@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-chs">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="css/icon.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="site_title">超级陈大爷小说网</title>
+    <link rel="stylesheet" href="css/recommand.css">
+</head>
+<body>
+    <header id="headering">
+        <h1 id="hamburger" class="hamburger">小说推荐</h1>
+        <a href="index.html" class="title-link">
+            <h1 id="site_title_text">超级陈大爷小说网</h1>
+        </a>
+    </header>
+
+    <aside id="filter">
+        <button id="closeBtn" class="close-btn">关闭</button>
+        <div>
+            <h2 id="search_novels">寻找小说</h2>
+            <div class="form-group">
+                <label for="search" id="search_label">搜索</label>
+                <input type="text" id="search" placeholder="输入小说名称">
+            </div>
+            <div class="form-group">
+                <label for="sort" id="sort_label">次序</label>
+                <select id="sort">
+                    <option value="word_high_to_low">字数最多优先</option>
+                    <option value="word_low_to_high">字数最少优先</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="platform" id="platform_label">平台</label>
+                <select id="platform">
+                    <option value="all">所有</option>
+                    <option value="fanqie">番茄</option>
+                    <option value="huaben">话本</option>
+                    <option value="feilu/shuqi">飞卢/书旗小说</option>
+                    <option value="qidian/qq_reading">起点/QQ阅读</option>
+                    <option value="other">其他</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="status" id="status_label">状态</label>
+                <select id="status">
+                    <option value="all">所有</option>
+                    <option value="completed">已完结</option>
+                    <option value="ongoing">连载中</option>
+                    <option value="discontinued">断更/被封杀</option>
+                    <option value="other">其他</option>
+                </select>
+            </div>
+            <button id="filterResults">寻找小说</button>
+            <button id="resetFilters">重置</button>
+
+            <div class="form-group">
+                <label for="languageSelector" id="language_Selector">🌐网页语言</label>
+                <select id="languageSelector">
+                    <option value="zh_chs">简体中文</option>
+                    <option value="zh_cht">繁體中文</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <div id="novel_card" class="novel-cards"></div>
+    </main>
+
+    <footer>
+        <p id="created_by">由HSC制造</p>
+    </footer>
+
+    <script src="js/recommand.js"></script>
+</body>
+</html>
