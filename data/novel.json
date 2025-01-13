@@ -978,5 +978,135 @@
             "images": "data/images/反派魔法少女，每日任务就是找茬(十万水星).jpg",
             "resources": "data/txt/连载中/反派魔法少女，每日任务就是找茬(十万水星).txt"
         }
+    },
+    {
+        "name": "HP：那个马尔福家的大小姐",
+        "author": "龙国的南希",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/HP：那个马尔福家的大小姐(龙国的南希).jpg",
+            "resources": "data/txt/已完结/HP：那个马尔福家的大小姐(龙国的南希).txt"
+        }
+    },
+    {
+        "name": "一觉醒来，竟然变成了女孩子",
+        "author": "脆响",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/一觉醒来，竟然变成了女孩子(脆响).jpg",
+            "resources": "data/txt/已完结/一觉醒来，竟然变成了女孩子(脆响).txt"
+        }
+    },
+    {
+        "name": "发现校花是狐妖后，她邀请我同居",
+        "author": "纯洁的小橘",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/发现校花是狐妖后，她邀请我同居(纯洁的小橘).jpg",
+            "resources": "data/txt/已完结/发现校花是狐妖后，她邀请我同居(纯洁的小橘).txt"
+        }
+    },
+    {
+        "name": "重生2000，青梅校花18岁",
+        "author": "奋斗老九",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/重生2000，青梅校花18岁(奋斗老九).jpg",
+            "resources": "data/txt/已完结/重生2000，青梅校花18岁(奋斗老九).txt"
+        }
+    },
+    {
+        "name": "隐藏在霍格沃茨当教授",
+        "author": "白白了开水",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/隐藏在霍格沃茨当教授(白白了开水).jpg",
+            "resources": "data/txt/已完结/隐藏在霍格沃茨当教授(白白了开水).txt"
+        }
+    },
+    {
+        "name": "HP：麻瓜教授今天又在搞事情",
+        "author": "暴躁肥宅",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/HP：麻瓜教授今天又在搞事情(暴躁肥宅).jpg",
+            "resources": "data/txt/已完结/HP：麻瓜教授今天又在搞事情(暴躁肥宅).txt"
+        }
+    },
+    {
+        "name": "刚变身萝莉，被邮寄到病娇校花家",
+        "author": "一只maozi",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/刚变身萝莉，被邮寄到病娇校花家(一只maozi).jpg",
+            "resources": "data/txt/已完结/刚变身萝莉，被邮寄到病娇校花家(一只maozi).txt"
+        }
+    },
+    {
+        "name": "变成娇弱妹纸，被青梅校花弄哭了",
+        "author": "十五月儿",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/变成娇弱妹纸，被青梅校花弄哭了(十五月儿).jpg",
+            "resources": "data/txt/已完结/变成娇弱妹纸，被青梅校花弄哭了(十五月儿).txt"
+        }
+    },
+    {
+        "name": "变成白毛妹纸，被校花宠溺了",
+        "author": "倒莉",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/变成白毛妹纸，被校花宠溺了(倒莉).jpg",
+            "resources": "data/txt/已完结/变成白毛妹纸，被校花宠溺了(倒莉).txt"
+        }
+    },
+    {
+        "name": "变身粉毛萝莉，被校花狠狠宠爱",
+        "author": "小小紫苏叶",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/变身粉毛萝莉，被校花狠狠宠爱(小小紫苏叶).jpg",
+            "resources": "data/txt/已完结/变身粉毛萝莉，被校花狠狠宠爱(小小紫苏叶).txt"
+        }
+    },
+    {
+        "name": "名柯：我宾加酒厂霸王花",
+        "author": "破烂校草",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/名柯：我宾加酒厂霸王花(破烂校草).jpg",
+            "resources": "data/txt/已完结/名柯：我宾加酒厂霸王花(破烂校草).txt"
+        }
+    },
+    {
+        "name": "霍格沃茨：我继承了自己的遗产",
+        "author": "荒于",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/霍格沃茨：我继承了自己的遗产(荒于).jpg",
+            "resources": "data/txt/已完结/霍格沃茨：我继承了自己的遗产(荒于).txt"
+        }
+    },
+    {
+        "name": "老弟，你是警察，不是暴徒啊",
+        "author": "KISS云中",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/老弟，你是警察，不是暴徒啊(KISS云中).jpg",
+            "resources": "data/txt/已完结/老弟，你是警察，不是暴徒啊(KISS云中).txt"
+        }
     }
 ]
