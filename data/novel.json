@@ -1108,5 +1108,175 @@
             "images": "data/images/老弟，你是警察，不是暴徒啊(KISS云中).jpg",
             "resources": "data/txt/已完结/老弟，你是警察，不是暴徒啊(KISS云中).txt"
         }
+    },
+    {
+        "name": "十日终焉",
+        "author": "杀虫队队员",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/十日终焉(杀虫队队员).jpg",
+            "resources": "data/txt/已完结/十日终焉(杀虫队队员).txt"
+        }
+    },
+    {
+        "name": "柯学：我和哀酱有个约定",
+        "author": "官方提醒你",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/柯学：我和哀酱有个约定(官方提醒你).jpg",
+            "resources": "data/txt/已完结/柯学：我和哀酱有个约定(官方提醒你).txt"
+        }
+    },
+    {
+        "name": "怎么啦，情敌就不能变成老婆吗？",
+        "author": "梦很轻",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/怎么啦，情敌就不能变成老婆吗？(梦很轻).jpg",
+            "resources": "data/txt/已完结/怎么啦，情敌就不能变成老婆吗？(梦很轻).txt"
+        }
+    },
+    {
+        "name": "名柯：橘子味的盛夏",
+        "author": "雲深不知处",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/名柯：橘子味的盛夏(雲深不知处).jpg",
+            "resources": "data/txt/已完结/名柯：橘子味的盛夏(雲深不知处).txt"
+        }
+    },
+    {
+        "name": "史上最狠出题人",
+        "author": "云止流水",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/史上最狠出题人(云止流水).jpg",
+            "resources": "data/txt/已完结/史上最狠出题人(云止流水).txt"
+        }
+    },
+    {
+        "name": "我！直男，开局校花假装摔倒？",
+        "author": "浮生若沙",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/我！直男，开局校花假装摔倒？(浮生若沙).jpg",
+            "resources": "data/txt/已完结/我！直男，开局校花假装摔倒？(浮生若沙).txt"
+        }
+    },
+    {
+        "name": "开局被校花打晕，醒后身家十万亿",
+        "author": "滴雨问秋声",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/开局被校花打晕，醒后身家十万亿(滴雨问秋声).jpg",
+            "resources": "data/txt/已完结/开局被校花打晕，醒后身家十万亿(滴雨问秋声).txt"
+        }
+    },
+    {
+        "name": "入学闪婚！御姐教授竟成我老婆",
+        "author": "爆更战神1号",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/入学闪婚！御姐教授竟成我老婆(爆更战神1号).jpg",
+            "resources": "data/txt/已完结/入学闪婚！御姐教授竟成我老婆(爆更战神1号).txt"
+        }
+    },
+    {
+        "name": "狂徒张三：他把对方律师送进监狱",
+        "author": "凤凌九霄",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/狂徒张三：他把对方律师送进监狱(凤凌九霄).jpg",
+            "resources": "data/txt/已完结/狂徒张三：他把对方律师送进监狱(凤凌九霄).txt"
+        }
+    },
+    {
+        "name": "离谱：一觉醒来我变成了女孩子",
+        "author": "狐家姐姐",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/离谱：一觉醒来我变成了女孩子(狐家姐姐).jpg",
+            "resources": "data/txt/已完结/离谱：一觉醒来我变成了女孩子(狐家姐姐).txt"
+        }
+    },
+    {
+        "name": "啥！？大我九岁的教授暗恋我？",
+        "author": "月十五",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/啥！？大我九岁的教授暗恋我？(月十五).jpg",
+            "resources": "data/txt/已完结/啥！？大我九岁的教授暗恋我？(月十五).txt"
+        }
+    },
+    {
+        "name": "狂徒张三：那个敲锤的，你完了",
+        "author": "一天一个达不溜",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/狂徒张三：那个敲锤的，你完了(一天一个达不溜).jpg",
+            "resources": "data/txt/已完结/狂徒张三：那个敲锤的，你完了(一天一个达不溜).txt"
+        }
+    },
+    {
+        "name": "重生：我的绝美教授女友太甜了！",
+        "author": "饭桌C位",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/重生：我的绝美教授女友太甜了！(饭桌C位).jpg",
+            "resources": "data/txt/已完结/重生：我的绝美教授女友太甜了！(饭桌C位).txt"
+        }
+    },
+    {
+        "name": "你个游戏设计师，天天警局备案？",
+        "author": "叫我大官人",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/你个游戏设计师，天天警局备案？(叫我大官人).jpg",
+            "resources": "data/txt/已完结/你个游戏设计师，天天警局备案？(叫我大官人).txt"
+        }
+    },
+    {
+        "name": "霍格沃茨的黑手教父",
+        "author": "我爱老婆zyy",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/霍格沃茨的黑手教父(我爱老婆zyy).jpg",
+            "resources": "data/txt/已完结/霍格沃茨的黑手教父(我爱老婆zyy).txt"
+        }
+    },
+    {
+        "name": "霍格沃兹：让我砍伏地魔？得加钱",
+        "author": "吹吹吹肥肥",
+        "platform": "番茄",
+        "status": "连载中",
+        "source": {
+            "images": "data/images/霍格沃兹：让我砍伏地魔？得加钱(吹吹吹肥肥).jpg",
+            "resources": "data/txt/连载中/霍格沃兹：让我砍伏地魔？得加钱(吹吹吹肥肥).txt"
+        }
+    },
+    {
+        "name": "进击的炊事兵",
+        "author": "深蓝棍僧",
+        "platform": "番茄",
+        "status": "已完结",
+        "source": {
+            "images": "data/images/进击的炊事兵(深蓝棍僧).jpg",
+            "resources": "data/txt/已完结/进击的炊事兵(深蓝棍僧).txt"
+        }
     }
 ]
